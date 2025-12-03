@@ -18,6 +18,7 @@
   </head>
 
   <body class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
+    <!-- Frame 1 -->
     <div
       class="relative w-full"
       style="
@@ -27,15 +28,16 @@
         background-repeat: no-repeat;
       "
     >
-      <div class="container mx-auto px-4 py-4">
+      <!-- header -->
+      <header class="container mx-auto px-4 py-4">
         <div
-          class="flex flex-col lg:flex-row items-center justify-between gap-4"
+          class="flex flex-col lg:flex-row items-center justify-center gap-6"
         >
           <div class="w-full lg:w-auto">
             <img src="Images/logo.png" alt="Logo" class="h-10 object-contain" />
           </div>
           <nav
-            class="flex flex-wrap items-center justify-center gap-6 xl:gap-8"
+            class="flex flex-wrap items-center justify-center gap-2 xl:gap-6"
           >
             <div
               class="flex flex-col items-center justify-center cursor-pointer"
@@ -136,13 +138,13 @@
             </div>
           </button>
         </div>
-      </div>
+      </header>
 
       <div
-        class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center"
+        class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-7 gap-8 items-center"
       >
         <div
-          class="lg:col-span-3 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
+          class="ml-20 lg:col-span-4 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
         >
           <h1 class="text-xl md:text-4xl font-bold mb-3 text-gray-800">
             Dịch vụ Khám bệnh tại nhà
@@ -152,7 +154,7 @@
           </p>
 
           <p
-            class="w-full lg:w-3/4 text-sm md:text-base text-gray-600 mb-6 leading-relaxed"
+            class="w-full lg:w-4/5 text-[12px] md:text-base text-gray-600 mb-6 leading-relaxed"
           >
             Bệnh viện Đa khoa Phương Đông triển khai dịch vụ khám bệnh tại nhà
             giúp các gia đình có con nhỏ, người cao tuổi, khó đi lại... được
@@ -164,12 +166,12 @@
           >
             <div class="flex flex-row gap-2 items-center justify-center">
               <img src="Images/note.png" alt="" />
-              <span>Đăng ký tư vấn</span>
+              <span>ĐĂNG KÝ TƯ VẤN</span>
             </div>
           </button>
         </div>
 
-        <div class="lg:col-span-2 flex justify-center order-1 lg:order-2">
+        <div class="lg:col-span-3 flex justify-center order-1 lg:order-2">
           <img
             src="Images/png_1.png"
             alt="Doctor Image"
@@ -179,62 +181,82 @@
       </div>
     </div>
 
-    <div class="mx-auto py-3 max-h-full">
-      <div class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-center">
-        <div class="lg:col-span-4 w-full h-full">
-          <img src="Images/png_2.png" alt="img2" />
+    <!-- Frame 2 -->
+    <div class="max-w-full">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-start lg:items-center"
+      >
+        <div
+          class="lg:col-span-4 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
+        >
+          <div class="relative">
+            <img
+              src="Images/png_2.png"
+              alt="img2"
+              class="w-full h-auto object-cover rounded-2xl"
+            />
+
+            <img
+              src="Images/Vector.png"
+              alt="vector"
+              class="absolute top-4 right-4 w-6 lg:top-10 lg:right-10 lg:w-9 hidden lg:block object-contain"
+            />
+          </div>
         </div>
 
-        <div class="lg:col-span-4 flex flex-col gap-2 text-justify">
+        <div class="lg:col-span-4 flex flex-col gap-2 justify-start text-left">
           <div class="flex flex-row items-center gap-2">
             <div
-              class="w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
             ></div>
             <h1
-              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent"
+              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
             >
-              GIỚI THIỆU
+              Giới thiệu
             </h1>
           </div>
 
           <h2
-            class="text-2xl md:text-3xl font-bold text-gray-800 leading-tight max-w-xl"
+            class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
           >
             Tạo ra tâm lý thoải mái, hỗ trợ điều trị tích cực cho người bệnh
           </h2>
 
-          <p class="text-gray-600 text-xs leading-relaxed">
-            Dịch vụ khám bệnh tại nhà có thể áp dụng với mọi đối tượng người
-            bệnh, đặc biệt tiện lợi đối với những người gặp khó khăn khi di
-            chuyển, người già neo đơn, người khuyết tật, gia đình có trẻ nhỏ…
-          </p>
+          <div
+            class="space-y-2 text-gray-600 text-xs leading-relaxed text-justify"
+          >
+            <p>
+              Dịch vụ khám bệnh tại nhà có thể áp dụng với mọi đối tượng người
+              bệnh, đặc biệt tiện lợi đối với những người gặp khó khăn khi di
+              chuyển, người già neo đơn, người khuyết tật, gia đình có trẻ nhỏ…
+            </p>
+            <p>
+              Trẻ nhỏ, cũng như người già, là đối tượng rất dễ mắc bệnh do hệ
+              miễn dịch chưa hoàn thiện, sức đề kháng kém. Nhiều cha mẹ e ngại
+              việc đưa trẻ đi khám chữa bệnh ở bệnh viện, trạm xá đông người vì
+              sợ lây nhiễm chéo. Giờ đây, với dịch vụ khám tại nhà, cha mẹ và bé
+              không cần chịu đựng tình trạng quá tải.
+            </p>
+            <p>
+              Người cao tuổi dễ mắc các bệnh về cơ xương khớp, huyết áp, tim
+              mạch, tiểu đường.... Đây là những bệnh khó điều trị khỏi dứt điểm
+              mà chỉ có thể kiểm soát. Dịch vụ khám bệnh tại nhà sẽ giúp các gia
+              đình chăm sóc người già ngay tại nơi ở là giải pháp y tế tiện lợi.
+            </p>
+          </div>
 
-          <p class="text-gray-600 text-xs leading-relaxed">
-            Trẻ nhỏ, cũng như người già, là đối tượng rất dễ mắc bệnh do hệ miễn
-            dịch chưa hoàn thiện, sức đề kháng kém. Nhiều cha mẹ e ngại việc đưa
-            trẻ đi khám chữa bệnh ở bệnh viện, trạm xá đông người vì sợ lây
-            nhiễm chéo. Giờ đây, với dịch vụ khám tại nhà, cha mẹ và bé không
-            cần chịu đựng tình trạng quá tải.
-          </p>
-
-          <p class="text-gray-600 text-xs leading-relaxed">
-            Người cao tuổi dễ mắc các bệnh về cơ xương khớp, huyết áp, tim mạch,
-            tiểu đường.... Đây là những bệnh khó điều trị khỏi dứt điểm mà chỉ
-            có thể kiểm soát. Dịch vụ khám bệnh tại nhà sẽ giúp các gia đình
-            chăm sóc người già ngay tại nơi ở là giải pháp y tế tiện lợi.
-          </p>
-
-          <div class="flex grid-cols-2 gap-4">
+          <div class="flex flex-col sm:flex-row gap-3 mt-4">
             <button
-              class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
+              class="btn_orange text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
             >
               <div class="flex flex-row gap-2 items-center justify-center">
-                <img src="Images/note.png" alt="" />
-                <span>Đăng ký tư vấn</span>
+                <img src="Images/note.png" alt="" class="w-5 h-5" />
+                <span>ĐĂNG KÝ TƯ VẤN</span>
               </div>
             </button>
+
             <button
-              class="btn_green text-white font-bold rounded-full py-2 my-3 px-4"
+              class="btn_green text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
             >
               <div class="flex flex-row gap-2 items-center justify-center">
                 <i class="fa-solid fa-phone-volume"></i>
@@ -243,14 +265,394 @@
             </button>
           </div>
         </div>
+
         <div
-          class="lg:col-span-1 relative w-full h-full hidden lg:flex justify-end items-start"
+          class="lg:col-span-1 hidden relative lg:flex justify-end items-start h-full"
+        >
+          <div>
+            <img
+              src="Images/png_2.1.png"
+              alt=""
+              class="object-contain max-h-48 absolute top-5 right-0"
+            />
+          </div>
+          <div>
+            <img
+              src="Images/Vector2.png"
+              alt=""
+              class="object-contain max-h-14 absolute bottom-5 right-20"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frame 3 -->
+    <div class="max-w-full">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-start lg:items-center"
+      >
+        <div
+          class="lg:col-span-1 relative hidden lg:flex justify-start items-start h-full"
         >
           <img
-            src="Images/png_2.1.png"
+            src="Images/Vector3.png"
             alt=""
-            class="object-contain max-h-[200px]"
+            class="absolute top-48 left-5 max-h-32 object-contain"
           />
+        </div>
+        <div class="lg:col-span-4 flex flex-col gap-2 justify-start text-left">
+          <div class="flex flex-row items-center gap-2">
+            <div
+              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+            ></div>
+            <h1
+              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+            >
+              Ưu điểm
+            </h1>
+          </div>
+
+          <h2
+            class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
+          >
+            Vì sao khách hàng nên lựa chọn dịch vụ Khám bệnh tại nhà của Bệnh
+            viện Phương Đông?
+          </h2>
+
+          <div class="grid grid-cols-1 lg:gap-6 gap-3 lg:grid-cols-2 mt-4">
+            <div class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 max-h-96">
+              <div
+                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+              >
+                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                  <img src="Images/icon1.png" alt="" />
+                </button>
+                <h1
+                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                >
+                  Đội ngũ y bác sĩ giàu y đức
+                </h1>
+                <p
+                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                >
+                  Đội ngũ bác sĩ khám sàng lọc và tư vấn có trình độ chuyên môn
+                  cao, giàu kinh nghiệm, tư vấn tận tình.
+                </p>
+              </div>
+              <div
+                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+              >
+                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                  <img src="Images/icon4.png" alt="" />
+                </button>
+                <h1
+                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                >
+                  Cảm giác thư thái, bình yên
+                </h1>
+                <p
+                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                >
+                  Không gian bệnh viện theo mô hình khách sạn hiện đại, khuôn
+                  viên rộng gần 10ha với hàng vạn cây xanh
+                </p>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 lg:mt-16 max-h-96"
+            >
+              <div
+                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+              >
+                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                  <img src="Images/icon2.png" alt="" />
+                </button>
+                <h1
+                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                >
+                  Chất lượng dịch vụ hàng đầu
+                </h1>
+                <p
+                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                >
+                  Trang bị đầy đủ phương tiện y tế cùng ekip cấp cứu luôn túc
+                  trực giúp theo dõi và xử trí kịp thời các trường hợp
+                </p>
+              </div>
+              <div
+                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+              >
+                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                  <img src="Images/icon3.png" alt="" />
+                </button>
+                <h1
+                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                >
+                  Chi phí hợp lý, tiết kiệm
+                </h1>
+                <p
+                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                >
+                  Xây dựng đa dạng gói khám với chi phí hợp lý, hỗ trợ trả góp
+                  qua thẻ tín dụng 0% lãi suất khi mua trọn gói.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-4 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
+        >
+          <div class="relative">
+            <img
+              src="Images/png3.png"
+              alt="img2"
+              class="w-full h-auto object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frame 4 -->
+    <div class="max-w-full overflow-x-hidden pb-12">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-12 items-start lg:items-center"
+      >
+        <div class="lg:col-span-1"></div>
+        <div class="lg:col-span-2 flex flex-col gap-2 justify-start text-left">
+          <div class="flex flex-row items-center gap-2">
+            <div
+              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+            ></div>
+            <h1
+              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+            >
+              Hình ảnh
+            </h1>
+          </div>
+          <div>
+            <h2
+              class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
+            >
+              Hình ảnh khách hàng sử dụng dịch vụ Khám bệnh tại nhà
+            </h2>
+            <p class="text-xs text-gray-700 mt-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
+              nec morbi mauris, turpis fringilla condimentum urna sagittis est.
+              Id tortor odio posuere a cursus netus massa. Tellus etiam nisl
+              pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare
+              sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id
+              nulla mauris. Sagittis turpis eget mauris massa congue in rutrum
+              vel. Augue est nunc a id quis mattis. Lorem ipsum dolor sit amet,
+              consectetur.
+            </p>
+            <button
+              class="btn_orange text-white font-semibold rounded-full py-2 px-4 shadow-md hover:shadow-lg transition-all w-full sm:w-auto mt-6"
+            >
+              <div class="flex flex-row gap-2 items-center justify-center">
+                <img src="Images/note.png" alt="" class="w-5 h-5" />
+                <span class="text-xs">ĐĂNG KÝ TƯ VẤN</span>
+              </div>
+            </button>
+            <div class="mt-6">
+              <button
+                class="p-[2px] rounded-full btn bg-clip-border bg-gradient-to-r from-[#3eed8b] to-[#0a9949] mt-4 cursor-pointer"
+              >
+                <span
+                  class="bg-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-left bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-thin text-transparent hover:text-white"
+                  ></i>
+                </span>
+              </button>
+              <button
+                class="p-[2px] rounded-full btn bg-clip-border bg-gradient-to-r from-[#3eed8b] to-[#0a9949] mt-4 cursor-pointer"
+              >
+                <span
+                  class="bg-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-thin text-transparent hover:text-white"
+                  ></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-3 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
+        >
+          <div class="max-w-full">
+            <div
+              id="default-carousel"
+              class="relative rounded-lg overflow-hidden shadow-lg"
+              data-carousel="static"
+            >
+              <!-- Carousel wrapper -->
+              <div class="relative h-80 md:h-96" data-carousel-inner>
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    class="object-cover w-full h-full"
+                    alt="Slide 1"
+                  />
+                  <span
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-gray-800"
+                    >First Slide</span
+                  >
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+                    class="object-cover w-full h-full"
+                    alt="Slide 2"
+                  />
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+                    class="object-cover w-full h-full"
+                    alt="Slide 3"
+                  />
+                </div>
+              </div>
+              <!-- Slider controls -->
+              <button
+                type="button"
+                class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                data-carousel-prev
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                data-carousel-next
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <!-- Slider indicators -->
+            <div
+              class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-1"
+              data-carousel-indicators
+            >
+              <button
+                type="button"
+                class="w-7 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+              ></button>
+            </div>
+            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+            <script>
+              // Update carousel indicators when slide changes
+              const carousel = document.getElementById("default-carousel");
+              const indicators = document.querySelectorAll(
+                "[data-carousel-indicators] button"
+              );
+              const items = document.querySelectorAll("[data-carousel-item]");
+
+              function updateIndicators() {
+                // Find which item is currently visible
+                items.forEach((item, index) => {
+                  if (!item.classList.contains("hidden")) {
+                    // Remove active state from all indicators
+                    indicators.forEach((indicator) => {
+                      indicator.classList.remove(
+                        "bg-blue-500",
+                        "hover:bg-blue-600",
+                        "focus:bg-blue-600"
+                      );
+                      indicator.classList.add(
+                        "bg-gray-300",
+                        "hover:bg-gray-400",
+                        "focus:bg-gray-400"
+                      );
+                    });
+
+                    // Add active state to current indicator
+                    if (indicators[index]) {
+                      indicators[index].classList.remove(
+                        "bg-gray-300",
+                        "hover:bg-gray-400",
+                        "focus:bg-gray-400"
+                      );
+                      indicators[index].classList.add(
+                        "bg-blue-500",
+                        "hover:bg-blue-600",
+                        "focus:bg-blue-600"
+                      );
+                    }
+                  }
+                });
+              }
+
+              // Monitor carousel slide changes
+              carousel.addEventListener("slide.flowbite", updateIndicators);
+
+              // Handle indicator clicks
+              indicators.forEach((indicator, index) => {
+                indicator.addEventListener("click", function () {
+                  updateIndicators();
+                });
+              });
+
+              // Initial update
+              updateIndicators();
+
+              // Also observe for DOM changes (in case Flowbite updates items visibility)
+              const observer = new MutationObserver(updateIndicators);
+              items.forEach((item) => {
+                observer.observe(item, {
+                  attributes: true,
+                  attributeFilter: ["class"],
+                });
+              });
+            </script>
+          </div>
         </div>
       </div>
     </div>

@@ -25,3 +25,8 @@
 .btn_green:hover {
   background: linear-gradient(#36ed85, #08883f);
 }
+
+.btn_green_yellow {
+  background: linear-gradient(#f4d03f, #16a085);
+  filter: drop-shadow(8px 0 16px #0a994935);
+}
