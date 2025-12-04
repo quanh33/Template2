@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
-  < class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
+  <body class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
     <!-- Frame 1 -->
     <div
       class="relative w-full"
@@ -861,28 +861,166 @@
     <!-- Frame 5 -->
     <div
       class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
+      style="clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 80%)"
     >
       <div
         class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
         style="background-image: url('Images/Group 10019.png')"
       ></div>
 
-      <div class="container mx-auto px-6 relative z-10 py-12">
+      <div class="container mx-auto mt-auto px-6 relative z-10 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
           <div
-            class="lg:col-span-2 flex justify-center order-2 lg:order-1 mt-32 absolute lg:relative"
-            style="clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 87%)"
+            class="lg:col-span-2 flex justify-center order-2 lg:order-1 mt-10 lg:mt-32 relative"
           >
             <img
               src="Images/png5.png"
               alt="Doctor Image"
-              class="max-h-[300px] lg:max-h-[600px] w-auto object-contain drop-shadow-2xl"
+              class="max-h-[400px] lg:max-h-[700px] w-auto object-contain drop-shadow-2xl"
             />
           </div>
 
           <div
-            class="lg:col-span-3 flex flex-col text-center lg:text-left items-center lg:items-start order-1 lg:order-2"
-          ></div>
+            class="lg:col-span-3 flex flex-col text-center lg:text-left items-center lg:items-start order-1 lg:order-2 w-full pl-0 lg:pl-10"
+          >
+            <div class="flex flex-col gap-2 mb-6 w-full">
+              <div
+                class="flex flex-row items-center gap-2 justify-center lg:justify-start"
+              >
+                <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+                <span
+                  class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
+                  >Câu hỏi</span
+                >
+              </div>
+              <h2 class="text-2xl lg:text-4xl font-bold text-gray-800">
+                Những câu hỏi thường gặp
+              </h2>
+            </div>
+
+            <div class="w-full space-y-3">
+              <!-- Item 1 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông có dịch vụ thai sản trọn gói
+                  không?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông có phục vụ ăn uống ngay trong
+                  khuôn viên không?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông có áp dụng Bảo hiểm Y tế, Bảo
+                  hiểm Bảo lãnh không?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 4 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông có dịch vụ tiêm chủng trẻ em
+                  không?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 5 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
+                  nào?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 6 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông được đầu tư về cơ sở vật chất
+                  như thế nào?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 7 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Có thể tham khảo lịch khám chi tiết của Bệnh viện Đa khoa
+                  Phương Đông ở đâu?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+              <!-- Item 8 -->
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Bệnh viện Đa khoa Phương Đông đang triển khai các gói khám
+                  sức khỏe nào?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

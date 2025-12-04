@@ -30,3 +30,11 @@
   background: linear-gradient(#f4d03f, #16a085);
   filter: drop-shadow(8px 0 16px #0a994935);
 }
+
+.background_green {
+  background: linear-gradient(135deg, #3eed8b 0%, #0a9949 100%);
+}
+
+.background_green:hover {
+  background: linear-gradient(135deg, #36ed85 0%, #08883f 100%);
+}
