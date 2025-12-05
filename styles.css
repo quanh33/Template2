@@ -38,3 +38,15 @@
 .background_green:hover {
   background: linear-gradient(135deg, #36ed85 0%, #08883f 100%);
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

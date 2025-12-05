@@ -916,7 +916,7 @@
               </div>
               <!-- Item 2 -->
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40 dropdown"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -927,6 +927,7 @@
                   class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
                 >
                   <i class="fa-solid fa-plus text-xs"></i>
+                  <div class="dropdown-content">Hello World!</div>
                 </div>
               </div>
               <!-- Item 3 -->
@@ -1023,6 +1024,262 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Frame 6 -->
+    <div
+      class="relative w-full min-h-[600px] lg:min-h-[900px] flex flex-col items-center mt-10"
+    >
+      <div class="relative z-10 container mx-auto px-6 py-12">
+        <div
+          class="flex flex-col gap-2 mb-6 w-full justify-center text-center items-center"
+        >
+          <div class="flex flex-row items-center gap-2 justify-center">
+            <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+            <span
+              class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
+            >
+              Quy trình
+            </span>
+            <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+          </div>
+          <h2 class="text-2xl lg:text-4xl font-bold text-gray-800">
+            Quy trình sử dụng dịch vụ Khám bệnh tại nhà
+          </h2>
+        </div>
+      </div>
+      <div
+        class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
+      >
+        <div class="min-h-screen w-full overflow-x-hidden">
+          <div
+            class="relative w-full h-[600px] lg:h-[900px] bg-cover bg-center bg-no-repeat"
+            style="background-image: url('Images/Frame6.png')"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frame 7 -->
+    <div
+      class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style="
+          background-image: url('Images/Mask\ group.png');
+          clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%);
+        "
+      ></div>
+
+      <div
+        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-6"
+      >
+        <div class="flex flex-col justify-center">
+          <div
+            class="flex flex-col gap-2 mb-6 w-full justify-center items-start"
+          >
+            <div class="flex flex-row items-center gap-2 justify-start">
+              <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+              <span
+                class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
+              >
+                BẢNG GIÁ
+              </span>
+            </div>
+
+            <h2 class="text-2xl lg:text-4xl font-bold text-gray-800 mb-4">
+              Bảng giá dịch vụ tại Phương Đông
+            </h2>
+
+            <p class="text-gray-600 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
+              nec morbi mauris, turpis fringilla condimentum urna sagittis est.
+              Id tortor odio posuere a cursus netus massa. Tellus etiam nisl
+              pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare
+              sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id
+              nulla mauris. Sagittis turpis eget mauris massa congue in rutrum
+              vel. Augue est nunc a id quis mattis. Lorem ipsum dolor sit amet,
+              consectetur.
+            </p>
+
+            <p class="text-gray-600 text-sm">
+              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi. Để được
+              báo giá chính xác nhất, quý khách liên hệ tổng đài 19001806.
+            </p>
+
+            <h3 class="font-semibold text-gray-800 mb-4">
+              Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
+              ngay!
+            </h3>
+
+            <div class="w-full">
+              <div
+                class="w-full max-w-2xl rounded-full p-1.5 pl-6 flex items-center bg-white border border-gray-100 hover:shadow-sm"
+              >
+                <input
+                  type="text"
+                  placeholder="Nhập số điện thoại..."
+                  class="flex-1 bg-transparent border-none outline-none text-gray-600 placeholder-gray-400 text-sm md:text-base"
+                />
+
+                <button
+                  class="btn_orange text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap"
+                >
+                  <i class="fa-solid fa-paper-plane text-sm"></i>
+                  <span class="text-sm md:text-base">GỬI THÔNG TIN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-2">
+              <button
+                class="w-8 h-8 rounded-full bg-white border border-green-500 flex items-center justify-center hover:bg-green-500 group transition-colors"
+              >
+                <i
+                  class="fa-solid fa-arrow-left text-green-500 group-hover:text-white text-xs"
+                ></i>
+              </button>
+              <button
+                class="w-8 h-8 rounded-full bg-white border border-green-500 flex items-center justify-center hover:bg-green-500 group transition-colors"
+              >
+                <i
+                  class="fa-solid fa-arrow-right text-green-500 group-hover:text-white text-xs"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full h-full relative flex justify-center items-center py-8 lg:py-12"
+        >
+          <div
+            id="default-carousel"
+            class="w-full relative"
+            data-carousel="slide"
+            data-carousel-interval="5000"
+          >
+            <div
+              class="relative h-[300px] md:h-[800px] overflow-hidden rounded-2xl shadow-2xl"
+            >
+              <div
+                class="hidden duration-700 ease-in-out"
+                data-carousel-item="active"
+              >
+                <img
+                  src="Images/Banggia.jpg"
+                  class="absolute block w-full h-full object-cover"
+                  alt="Slide 1"
+                />
+              </div>
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="Images/Banggia.jpg"
+                  class="absolute block w-full h-full object-cover"
+                  alt="Slide 2"
+                />
+              </div>
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="Images/Banggia.jpg"
+                  class="absolute block w-full h-full object-cover"
+                  alt="Slide 3"
+                />
+              </div>
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="Images/Banggia.jpg"
+                  class="absolute block w-full h-full object-cover"
+                  alt="Slide 4"
+                />
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center mt-6 space-x-2"
+              data-carousel-indicators
+            >
+              <button
+                type="button"
+                class="w-8 h-1.5 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] transition-all duration-500"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
+                aria-current="false"
+                aria-label="Slide 2"
+                data-carousel-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
+                aria-current="false"
+                aria-label="Slide 3"
+                data-carousel-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
+                aria-current="false"
+                aria-label="Slide 4"
+                data-carousel-slide-to="3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const carouselElement = document.getElementById("default-carousel");
+          const items = carouselElement.querySelectorAll(
+            "[data-carousel-item]"
+          );
+          const indicators = carouselElement.querySelectorAll(
+            "[data-carousel-indicators] button"
+          );
+
+          const activeClasses = [
+            "bg-gradient-to-r",
+            "from-[#3eed8b]",
+            "to-[#0a9949]",
+            "w-8",
+          ];
+          const inactiveClasses = ["bg-gray-300", "w-3"];
+
+          const observer = new MutationObserver((mutations) => {
+            items.forEach((item, index) => {
+              if (
+                !item.classList.contains() &&
+                item.classList.contains("z-30")
+              ) {
+                indicators.forEach((ind) => {
+                  ind.classList.remove(...activeClasses);
+                  ind.classList.add(...inactiveClasses);
+                });
+                if (indicators[index]) {
+                  indicators[index].classList.remove(...inactiveClasses);
+                  indicators[index].classList.add(...activeClasses);
+                }
+              }
+            });
+          });
+
+          items.forEach((item) => {
+            observer.observe(item, {
+              attributes: true,
+              attributeFilter: ["class"],
+            });
+          });
+        });
+      </script>
     </div>
   </body>
 </html>
