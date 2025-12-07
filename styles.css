@@ -50,3 +50,41 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Process Flow Styles */
+.process-step {
+  width: 120px;
+  height: 120px;
+}
+
+@media (min-width: 1024px) {
+  .process-step {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.step-description {
+  display: none;
+  z-index: 30;
+}
+
+.process-step:hover .step-description,
+.process-step.active .step-description {
+  display: block;
+}
+
+/* Mobile: Show description on click */
+@media (max-width: 768px) {
+  .process-step {
+    cursor: pointer;
+  }
+}
+
+/* Responsive adjustments for process flow */
+@media (max-width: 768px) {
+  .process-step {
+    width: 100px;
+    height: 100px;
+  }
+}

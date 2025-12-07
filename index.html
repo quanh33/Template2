@@ -14,414 +14,463 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
+  <style>
+    .splide__pagination {
+      bottom: -2rem; /* Đẩy xuống dưới ảnh */
+      gap: 6px; /* Khoảng cách giữa các hình chữ nhật */
+    }
+
+    /* Style chung cho các nút hình chữ nhật */
+    .splide__pagination__page {
+      width: 10px; /* Chiều rộng mặc định */
+      height: 3px; /* Chiều cao để tạo hình chữ nhật */
+      border-radius: 4px; /* Bo góc nhẹ */
+      background: #d1d5db; /* Màu xám mặc định (Tailwind gray-300) */
+      opacity: 1; /* Hiển thị rõ ràng */
+      transform: none; /* Reset hiệu ứng scale mặc định */
+      transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    }
+
+    /* Style cho nút Active (Đang được chọn) */
+    .splide__pagination__page.is-active {
+      /* Màu gradient theo yêu cầu */
+      background: linear-gradient(to right, #3eed8b, #0a9949);
+      width: 20px; /* Làm cho nút active dài hơn một chút */
+    }
+  </style>
+
   <body class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
     <!-- Frame 1 -->
-    <div
-      class="relative w-full"
-      style="
-        background-image: url('Images/background.png');
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-      "
-    >
-      <!-- header -->
-      <header class="container mx-auto px-4 py-4">
-        <div
-          class="flex flex-col lg:flex-row items-center justify-center gap-6"
-        >
-          <div class="w-full lg:w-auto">
-            <img src="Images/logo.png" alt="Logo" class="h-10 object-contain" />
+    <div class="2xl:container mx-auto relative w-full">
+      <div class="absolute inset-0 z-0 w-full h-full">
+        <img src="Images/background.png" class="size-full" />
+      </div>
+
+      <div class="relative z-10 px-5">
+        <header class="container mx-auto py-4">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-6"
+          >
+            <div class="w-full lg:w-auto">
+              <img
+                src="Images/logo.png"
+                alt="Logo"
+                class="h-10 object-contain"
+              />
+            </div>
+            <nav
+              class="flex flex-wrap items-center justify-center gap-2 xl:gap-8"
+            >
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Giới thiệu
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Đối tượng khách hàng
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Quy trình
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Bảng giá
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Cảm nhận
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Đội ngũ bác sĩ
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center cursor-pointer"
+              >
+                <h1
+                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                >
+                  Hình ảnh và video
+                </h1>
+                <div
+                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                ></div>
+              </div>
+            </nav>
+
+            <button
+              class="btn_orange text-white font-bold py-2 px-4 rounded-full text-xs"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <span
+                  class="bg-white text-orange-500 w-6 h-6 rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone-volume"></i>
+                </span>
+                Gọi 1900 1806
+              </div>
+            </button>
           </div>
-          <nav
-            class="flex flex-wrap items-center justify-center gap-2 xl:gap-6"
-          >
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Giới thiệu
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Đối tượng khách hàng
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Quy trình
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Bảng giá
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Cảm nhận
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Đội ngũ bác sĩ
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center cursor-pointer"
-            >
-              <h1
-                class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              >
-                Hình ảnh và video
-              </h1>
-              <div
-                class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-              ></div>
-            </div>
-          </nav>
+        </header>
 
-          <button
-            class="btn_orange text-white font-bold py-2 px-4 rounded-full text-xs"
-          >
-            <div class="flex flex-row items-center gap-2">
-              <span
-                class="bg-white text-orange-500 w-6 h-6 rounded-full flex items-center justify-center"
-              >
-                <i class="fa-solid fa-phone-volume"></i>
-              </span>
-              Gọi 1900 1806
-            </div>
-          </button>
-        </div>
-      </header>
-
-      <div
-        class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-7 gap-8 items-center"
-      >
         <div
-          class="ml-20 lg:col-span-4 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
+          class="container mx-auto grid grid-cols-1 lg:grid-cols-7 gap-8 items-center"
         >
-          <h1 class="text-xl md:text-4xl font-bold mb-3 text-gray-800">
-            Dịch vụ Khám bệnh tại nhà
-          </h1>
-          <p class="text-xl md:text-4xl font-bold mb-6 text-gray-800">
-            An tâm chẳng ngại đường xa
-          </p>
-
-          <p
-            class="w-full lg:w-4/5 text-[12px] md:text-base text-gray-600 mb-6 leading-relaxed"
+          <div
+            class="ml-0 lg:col-span-4 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
           >
-            Bệnh viện Đa khoa Phương Đông triển khai dịch vụ khám bệnh tại nhà
-            giúp các gia đình có con nhỏ, người cao tuổi, khó đi lại... được
-            hưởng sự chăm sóc y tế cao cấp, an toàn, hiệu quả.
-          </p>
+            <h1 class="text-xl md:text-4xl font-bold mb-3 text-gray-800">
+              Dịch vụ Khám bệnh tại nhà
+            </h1>
+            <p class="text-xl md:text-4xl font-bold mb-6 text-gray-800">
+              An tâm chẳng ngại đường xa
+            </p>
 
-          <button
-            class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
-          >
-            <div class="flex flex-row gap-2 items-center justify-center">
-              <img src="Images/note.png" alt="" />
-              <span>ĐĂNG KÝ TƯ VẤN</span>
-            </div>
-          </button>
-        </div>
+            <p
+              class="w-full lg:w-4/5 text-[12px] md:text-base text-gray-600 mb-6 leading-relaxed"
+            >
+              Bệnh viện Đa khoa Phương Đông triển khai dịch vụ khám bệnh tại nhà
+              giúp các gia đình có con nhỏ, người cao tuổi, khó đi lại... được
+              hưởng sự chăm sóc y tế cao cấp, an toàn, hiệu quả.
+            </p>
 
-        <div class="lg:col-span-3 flex justify-center order-1 lg:order-2">
-          <img
-            src="Images/png_1.png"
-            alt="Doctor Image"
-            class="max-h-[300px] lg:max-h-[500px] w-auto object-contain drop-shadow-xl"
-          />
+            <button
+              class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
+            >
+              <div class="flex flex-row gap-2 items-center justify-center">
+                <img src="Images/note.png" alt="" />
+                <span>ĐĂNG KÝ TƯ VẤN</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="lg:col-span-3 flex justify-center order-1 lg:order-2">
+            <img
+              src="Images/png_1.png"
+              alt="Doctor Image"
+              class="max-h-[300px] lg:max-h-[500px] w-auto object-contain drop-shadow-xl"
+            />
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Frame 2 -->
-    <div class="max-w-full">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-start lg:items-center"
-      >
-        <div
-          class="lg:col-span-4 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
-        >
-          <div class="relative">
-            <img
-              src="Images/png_2.png"
-              alt="img2"
-              class="w-full h-auto object-cover rounded-2xl"
-            />
+    <div
+      class="w-full h-full 2xl:container mx-auto my-3 bg-white relative flex justify-center items-center"
+    >
+      <div class="absolute top-0 left-0 w-full h-full z-0 2xl:max-h-[100%]">
+        <img
+          src="Images/png_2.png"
+          alt="img2"
+          class="w-full h-full object-contain object-left-top hidden lg:block"
+        />
 
-            <img
-              src="Images/Vector.png"
-              alt="vector"
-              class="absolute top-4 right-4 w-6 lg:top-10 lg:right-10 lg:w-9 hidden lg:block object-contain"
-            />
-          </div>
-        </div>
+        <img
+          src="Images/Vector.png"
+          alt="vector"
+          class="absolute top-4 left-2/5 w-6 lg:top-10 lg:right-20 lg:w-9 hidden xl:block object-contain"
+        />
 
-        <div class="lg:col-span-4 flex flex-col gap-2 justify-start text-left">
-          <div class="flex flex-row items-center gap-2">
-            <div
-              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-            ></div>
-            <h1
-              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
-            >
-              Giới thiệu
-            </h1>
-          </div>
+        <img
+          src="Images/png_2.1.png"
+          alt=""
+          class="object-contain max-h-48 absolute top-0 right-0 hidden xl:block"
+        />
+        <img
+          src="Images/Vector2.png"
+          alt=""
+          class="object-contain max-h-14 absolute bottom-5 right-20 hidden xl:block"
+        />
+      </div>
 
-          <h2
-            class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
-          >
-            Tạo ra tâm lý thoải mái, hỗ trợ điều trị tích cực cho người bệnh
-          </h2>
+      <div class="mx-auto px-5">
+        <div class="grid lg:grid-cols-2 items-center py-8 lg:py-12">
+          <div class="lg:col-span-1 h-full hidden lg:block"></div>
 
           <div
-            class="space-y-2 text-gray-600 text-xs leading-relaxed text-justify"
+            class="lg:col-span-1 flex flex-col gap-2 justify-center item-center text-left relative"
           >
-            <p>
-              Dịch vụ khám bệnh tại nhà có thể áp dụng với mọi đối tượng người
-              bệnh, đặc biệt tiện lợi đối với những người gặp khó khăn khi di
-              chuyển, người già neo đơn, người khuyết tật, gia đình có trẻ nhỏ…
-            </p>
-            <p>
-              Trẻ nhỏ, cũng như người già, là đối tượng rất dễ mắc bệnh do hệ
-              miễn dịch chưa hoàn thiện, sức đề kháng kém. Nhiều cha mẹ e ngại
-              việc đưa trẻ đi khám chữa bệnh ở bệnh viện, trạm xá đông người vì
-              sợ lây nhiễm chéo. Giờ đây, với dịch vụ khám tại nhà, cha mẹ và bé
-              không cần chịu đựng tình trạng quá tải.
-            </p>
-            <p>
-              Người cao tuổi dễ mắc các bệnh về cơ xương khớp, huyết áp, tim
-              mạch, tiểu đường.... Đây là những bệnh khó điều trị khỏi dứt điểm
-              mà chỉ có thể kiểm soát. Dịch vụ khám bệnh tại nhà sẽ giúp các gia
-              đình chăm sóc người già ngay tại nơi ở là giải pháp y tế tiện lợi.
-            </p>
-          </div>
+            <div class="flex flex-row items-center gap-2">
+              <div
+                class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+              ></div>
+              <h1
+                class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+              >
+                Giới thiệu
+              </h1>
+            </div>
 
-          <div class="flex flex-col sm:flex-row gap-3 mt-4">
-            <button
-              class="btn_orange text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+            <h2
+              class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight mt-2"
             >
-              <div class="flex flex-row gap-2 items-center justify-center">
-                <img src="Images/note.png" alt="" class="w-5 h-5" />
-                <span>ĐĂNG KÝ TƯ VẤN</span>
-              </div>
-            </button>
+              Tạo ra tâm lý thoải mái, hỗ trợ điều trị tích cực cho người bệnh
+            </h2>
 
-            <button
-              class="btn_green text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+            <div
+              class="space-y-2 text-gray-600 text-xs leading-relaxed text-justify mt-4"
             >
-              <div class="flex flex-row gap-2 items-center justify-center">
-                <i class="fa-solid fa-phone-volume"></i>
-                <span>Gọi cho chúng tôi</span>
-              </div>
-            </button>
-          </div>
-        </div>
+              <p>
+                Dịch vụ khám bệnh tại nhà có thể áp dụng với mọi đối tượng người
+                bệnh, đặc biệt tiện lợi đối với những người gặp khó khăn khi di
+                chuyển, người già neo đơn, người khuyết tật, gia đình có trẻ
+                nhỏ…
+              </p>
+              <p>
+                Trẻ nhỏ, cũng như người già, là đối tượng rất dễ mắc bệnh do hệ
+                miễn dịch chưa hoàn thiện, sức đề kháng kém. Nhiều cha mẹ e ngại
+                việc đưa trẻ đi khám chữa bệnh ở bệnh viện, trạm xá đông người
+                vì sợ lây nhiễm chéo. Giờ đây, với dịch vụ khám tại nhà, cha mẹ
+                và bé không cần chịu đựng tình trạng quá tải.
+              </p>
+              <p>
+                Người cao tuổi dễ mắc các bệnh về cơ xương khớp, huyết áp, tim
+                mạch, tiểu đường.... Đây là những bệnh khó điều trị khỏi dứt
+                điểm mà chỉ có thể kiểm soát. Dịch vụ khám bệnh tại nhà sẽ giúp
+                các gia đình chăm sóc người già ngay tại nơi ở là giải pháp y tế
+                tiện lợi.
+              </p>
+            </div>
 
-        <div
-          class="lg:col-span-1 hidden relative lg:flex justify-end items-start h-full"
-        >
-          <div>
-            <img
-              src="Images/png_2.1.png"
-              alt=""
-              class="object-contain max-h-48 absolute top-5 right-0"
-            />
-          </div>
-          <div>
-            <img
-              src="Images/Vector2.png"
-              alt=""
-              class="object-contain max-h-14 absolute bottom-5 right-20"
-            />
+            <div class="flex flex-col sm:flex-row gap-3 mt-6">
+              <button
+                class="btn_orange text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+              >
+                <div class="flex flex-row gap-2 items-center justify-center">
+                  <img src="Images/note.png" alt="" class="w-5 h-5" />
+                  <span>ĐĂNG KÝ TƯ VẤN</span>
+                </div>
+              </button>
+
+              <button
+                class="btn_green text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+              >
+                <div class="flex flex-row gap-2 items-center justify-center">
+                  <i class="fa-solid fa-phone-volume"></i>
+                  <span>Gọi cho chúng tôi</span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Frame 3 -->
-    <div class="max-w-full">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-start lg:items-center"
-      >
-        <div
-          class="lg:col-span-1 relative hidden lg:flex justify-start items-start h-full"
-        >
-          <img
-            src="Images/Vector3.png"
-            alt=""
-            class="absolute top-48 left-5 max-h-32 object-contain"
-          />
-        </div>
-        <div class="lg:col-span-4 flex flex-col gap-2 justify-start text-left">
-          <div class="flex flex-row items-center gap-2">
-            <div
-              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-            ></div>
-            <h1
-              class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
-            >
-              Ưu điểm
-            </h1>
-          </div>
+    <div
+      class="w-full h-full my-3 mx-auto 2xl:container bg-white relative overflow-hidden flex justify-center items-center"
+    >
+      <div class="absolute top-0 left-0 w-full h-full z-0 2xl:max-h-[100%]">
+        <img
+          src="Images/png3.png"
+          alt="img3"
+          class="w-full h-full object-contain object-right-top hidden lg:block"
+        />
 
-          <h2
-            class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
+        <img
+          src="Images/Vector3.png"
+          alt="vector3"
+          class="absolute left-0 w-full top-1/2 lg:w-15 hidden xl:block object-contain"
+        />
+      </div>
+
+      <div class="mx-auto px-5">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center"
+        >
+          <div
+            class="lg:col-span-3 flex flex-col gap-2 justify-start text-left"
           >
-            Vì sao khách hàng nên lựa chọn dịch vụ Khám bệnh tại nhà của Bệnh
-            viện Phương Đông?
-          </h2>
+            <div class="flex flex-row items-center gap-2">
+              <div
+                class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+              ></div>
+              <h1
+                class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+              >
+                Ưu điểm
+              </h1>
+            </div>
 
-          <div class="grid grid-cols-1 lg:gap-6 gap-3 lg:grid-cols-2 mt-4">
-            <div class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 max-h-96">
-              <div
-                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
-              >
-                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
-                  <img src="Images/icon1.png" alt="" />
-                </button>
-                <h1
-                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
-                >
-                  Đội ngũ y bác sĩ giàu y đức
-                </h1>
-                <p
-                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
-                >
-                  Đội ngũ bác sĩ khám sàng lọc và tư vấn có trình độ chuyên môn
-                  cao, giàu kinh nghiệm, tư vấn tận tình.
-                </p>
-              </div>
-              <div
-                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
-              >
-                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
-                  <img src="Images/icon4.png" alt="" />
-                </button>
-                <h1
-                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
-                >
-                  Cảm giác thư thái, bình yên
-                </h1>
-                <p
-                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
-                >
-                  Không gian bệnh viện theo mô hình khách sạn hiện đại, khuôn
-                  viên rộng gần 10ha với hàng vạn cây xanh
-                </p>
-              </div>
-            </div>
-            <div
-              class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 lg:mt-16 max-h-96"
+            <h2
+              class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
             >
+              Vì sao khách hàng nên lựa chọn dịch vụ Khám bệnh tại nhà của Bệnh
+              viện Phương Đông?
+            </h2>
+
+            <div class="grid grid-cols-1 lg:gap-6 gap-3 lg:grid-cols-2 mt-4">
               <div
-                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+                class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 max-h-96"
               >
-                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
-                  <img src="Images/icon2.png" alt="" />
-                </button>
-                <h1
-                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                <div
+                  class="flex sm:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
                 >
-                  Chất lượng dịch vụ hàng đầu
-                </h1>
-                <p
-                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                  <div class="flex justify-center items-center">
+                    <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                      <img src="Images/icon1.png" alt="" />
+                    </button>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1
+                      class="text-gray-600 text-sm font-semibold sm:font-bold leading-relaxed text-justify"
+                    >
+                      Đội ngũ y bác sĩ giàu y đức
+                    </h1>
+                    <p
+                      class="text-gray-600 text-xs leading-relaxed text-justify"
+                    >
+                      Đội ngũ bác sĩ khám sàng lọc và tư vấn có trình độ chuyên
+                      môn cao, giàu kinh nghiệm, tư vấn tận tình.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
                 >
-                  Trang bị đầy đủ phương tiện y tế cùng ekip cấp cứu luôn túc
-                  trực giúp theo dõi và xử trí kịp thời các trường hợp
-                </p>
+                  <div class="flex justify-center items-center">
+                    <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                      <img src="Images/icon4.png" alt="" />
+                    </button>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1
+                      class="text-gray-600 text-sm font-semibold sm:font-bold leading-relaxed text-justify"
+                    >
+                      Cảm giác thư thái, bình yên
+                    </h1>
+                    <p
+                      class="text-gray-600 text-xs leading-relaxed text-justify"
+                    >
+                      Không gian bệnh viện theo mô hình khách sạn hiện đại,
+                      khuôn viên rộng gần 10ha với hàng vạn cây xanh
+                    </p>
+                  </div>
+                </div>
               </div>
               <div
-                class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+                class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 lg:mt-16 max-h-96"
               >
-                <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
-                  <img src="Images/icon3.png" alt="" />
-                </button>
-                <h1
-                  class="text-gray-600 text-sm font-semibold leading-relaxed text-justify"
+                <div
+                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
                 >
-                  Chi phí hợp lý, tiết kiệm
-                </h1>
-                <p
-                  class="text-gray-600 text-xs leading-relaxed text-justify hidden sm:block"
+                  <div class="flex justify-center items-center">
+                    <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                      <img src="Images/icon2.png" alt="" />
+                    </button>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1
+                      class="text-gray-600 text-sm font-semibold sm:font-bold leading-relaxed text-justify"
+                    >
+                      Chất lượng dịch vụ hàng đầu
+                    </h1>
+                    <p
+                      class="text-gray-600 text-xs leading-relaxed text-justify"
+                    >
+                      Trang bị đầy đủ phương tiện y tế cùng ekip cấp cứu luôn
+                      túc trực giúp theo dõi và xử trí kịp thời các trường hợp
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
                 >
-                  Xây dựng đa dạng gói khám với chi phí hợp lý, hỗ trợ trả góp
-                  qua thẻ tín dụng 0% lãi suất khi mua trọn gói.
-                </p>
+                  <div class="flex justify-center items-center">
+                    <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
+                      <img src="Images/icon3.png" alt="" />
+                    </button>
+                  </div>
+                  <div class="flex flex-col">
+                    <h1
+                      class="text-gray-600 text-sm font-semibold sm:font-bold leading-relaxed text-justify"
+                    >
+                      Chi phí hợp lý, tiết kiệm
+                    </h1>
+                    <p
+                      class="text-gray-600 text-xs leading-relaxed text-justify"
+                    >
+                      Xây dựng đa dạng gói khám với chi phí hợp lý, hỗ trợ trả
+                      góp qua thẻ tín dụng 0% lãi suất khi mua trọn gói.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="lg:col-span-4 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
-        >
-          <div class="relative">
-            <img
-              src="Images/png3.png"
-              alt="img2"
-              class="w-full h-auto object-cover rounded-2xl"
-            />
-          </div>
+          <div class="lg:col-span-2"></div>
         </div>
       </div>
     </div>
 
     <!-- Frame 4 -->
-    <div class="max-w-full overflow-x-hidden pb-12">
+    <div
+      class="w-full h-full my-3 2xl:container mx-auto bg-white relative overflow-hidden flex justify-center items-center"
+    >
       <div
-        class="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-12 items-start lg:items-center"
+        class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center py-2 px-4 xl:ml-24"
       >
-        <div class="lg:col-span-1"></div>
-        <div class="lg:col-span-2 flex flex-col gap-2 justify-start text-left">
+        <div
+          class="lg:col-span-2 flex flex-col gap-2 justify-start text-left px-2 lg:px-5"
+        >
           <div class="flex flex-row items-center gap-2">
             <div
               class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
@@ -432,443 +481,395 @@
               Hình ảnh
             </h1>
           </div>
+
           <div>
             <h2
-              class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight"
+              class="text-xl lg:text-3xl font-bold text-gray-800 leading-tight mb-4"
             >
               Hình ảnh khách hàng sử dụng dịch vụ Khám bệnh tại nhà
             </h2>
-            <p class="text-xs text-gray-700 mt-5">
+            <p class="text-sm text-gray-600 mt-2 mb-6 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
               nec morbi mauris, turpis fringilla condimentum urna sagittis est.
-              Id tortor odio posuere a cursus netus massa. Tellus etiam nisl
-              pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare
-              sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id
-              nulla mauris. Sagittis turpis eget mauris massa congue in rutrum
-              vel. Augue est nunc a id quis mattis. Lorem ipsum dolor sit amet,
-              consectetur.
+              Id tortor odio posuere a cursus netus massa.
             </p>
+
             <button
-              class="btn_orange text-white font-semibold rounded-full py-2 px-4 shadow-md hover:shadow-lg transition-all w-full sm:w-auto mt-6"
+              class="bg-gradient-to-r from-[#ff7e00] to-[#ff5d00] text-white font-semibold rounded-full py-3 px-6 shadow-md hover:shadow-lg hover:opacity-90 transition-all w-full sm:w-auto flex flex-row gap-2 items-center justify-center"
             >
-              <div class="flex flex-row gap-2 items-center justify-center">
-                <img src="Images/note.png" alt="" class="w-5 h-5" />
-                <span class="text-xs">ĐĂNG KÝ TƯ VẤN</span>
-              </div>
+              <img
+                src="Images/note.png"
+                alt=""
+                class="w-5 h-5 brightness-0 invert"
+              />
+              <span class="text-sm uppercase">ĐĂNG KÝ TƯ VẤN</span>
             </button>
-            <div class="mt-6">
+
+            <div class="mt-8 flex gap-4">
               <button
-                class="p-[2px] rounded-full btn bg-clip-border bg-gradient-to-r from-[#3eed8b] to-[#0a9949] mt-4 cursor-pointer"
+                id="custom-prev"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300"
               >
-                <span
-                  class="bg-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-                >
-                  <i
-                    class="fa-solid fa-arrow-left bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-thin text-transparent hover:text-white"
-                  ></i>
-                </span>
+                <i
+                  class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
+                ></i>
               </button>
+
               <button
-                class="p-[2px] rounded-full btn bg-clip-border bg-gradient-to-r from-[#3eed8b] to-[#0a9949] mt-4 cursor-pointer"
+                id="custom-next"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300"
               >
-                <span
-                  class="bg-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
-                >
-                  <i
-                    class="fa-solid fa-arrow-right bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-thin text-transparent hover:text-white"
-                  ></i>
-                </span>
+                <i
+                  class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
+                ></i>
               </button>
             </div>
           </div>
         </div>
-        <div
-          class="lg:col-span-3 w-full h-full relative flex justify-center lg:block py-8 lg:py-12"
-        >
-          <div class="w-full h-full relative">
-            <div
-              id="default-carousel"
-              class="w-full"
-              data-carousel="slide"
-              data-carousel-interval="5000"
-            >
-              <div
-                class="relative h-[500px] md:h-[600px] overflow-hidden rounded-lg shadow-lg bg-white"
-              >
-                <div
-                  class="hidden duration-700 ease-in-out"
-                  data-carousel-item="active"
-                >
-                  <div class="grid grid-cols-3 grid-rows-3 gap-1 w-full h-full">
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 1"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png3.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 2"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 3"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 4"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png5.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 5"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 6"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 7"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon3.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 8"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon4.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 9"
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="lg:col-span-3 w-full h-full relative py-4 lg:py-12">
+          <div id="gallery-splide" class="splide w-full">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
                   <div
-                    class="grid grid-cols-3 grid-rows-3 gap-1 w-full h-full p-2"
+                    class="relative h-[400px] md:h-[500px] lg:h-[600px] w-full bg-white rounded-xl overflow-hidden shadow-lg p-2"
                   >
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png3.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 10"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 11"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 12"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 13"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png5.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 14"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 15"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 16"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon3.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 17"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/icon4.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 18"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <div class="grid grid-cols-3 grid-rows-3 gap-1 w-full h-full">
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 19"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 20"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 21"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 22"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 23"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 24"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 25"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 26"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_1.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 27"
-                      />
+                    <div
+                      class="grid grid-cols-3 grid-rows-3 gap-2 w-full h-full"
+                    >
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 1"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 2"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 3"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 4"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png5.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 5"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 6"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 7"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 8"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon4.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img 9"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </li>
 
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <div class="grid grid-cols-3 grid-rows-3 w-full h-full">
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 28"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 29"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 30"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 31"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 32"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 33"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 34"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 35"
-                      />
-                    </div>
-                    <div class="relative overflow-hidden rounded-lg">
-                      <img
-                        src="Images/png_2.png"
-                        class="absolute w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                        alt="Img 36"
-                      />
+                <li class="splide__slide">
+                  <div
+                    class="relative h-[400px] md:h-[500px] lg:h-[600px] w-full bg-white rounded-xl overflow-hidden shadow-lg p-2"
+                  >
+                    <div
+                      class="grid grid-cols-3 grid-rows-3 gap-2 w-full h-full"
+                    >
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png5.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon4.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </li>
 
-              <div
-                class="flex justify-center mt-4 space-x-2"
-                data-carousel-indicators
-              >
-                <button
-                  type="button"
-                  class="w-8 h-1 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] focus:outline-none transition-all duration-500"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                  data-carousel-slide-to="0"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none transition-all duration-500"
-                  aria-current="false"
-                  aria-label="Slide 2"
-                  data-carousel-slide-to="1"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none transition-all duration-500"
-                  aria-current="false"
-                  aria-label="Slide 3"
-                  data-carousel-slide-to="2"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-1 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none transition-all duration-500"
-                  aria-current="false"
-                  aria-label="Slide 4"
-                  data-carousel-slide-to="3"
-                ></button>
-              </div>
+                <li class="splide__slide">
+                  <div
+                    class="relative h-[400px] md:h-[500px] lg:h-[600px] w-full bg-white rounded-xl overflow-hidden shadow-lg p-2"
+                  >
+                    <div
+                      class="grid grid-cols-3 grid-rows-3 gap-2 w-full h-full"
+                    >
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png5.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon4.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
 
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const carouselElement =
-                    document.getElementById("default-carousel");
-                  const items = carouselElement.querySelectorAll(
-                    "[data-carousel-item]"
-                  );
-                  const indicators = carouselElement.querySelectorAll(
-                    "[data-carousel-indicators] button"
-                  );
-                  const activeClasses = [
-                    "bg-gradient-to-r",
-                    "from-[#3eed8b]",
-                    "to-[#0a9949]",
-                    "w-8",
-                  ];
-                  const inactiveClasses = ["bg-gray-300", "w-3"];
-                  const observer = new MutationObserver((mutations) => {
-                    items.forEach((item, index) => {
-                      if (
-                        !item.classList.contains("hidden") &&
-                        item.classList.contains("z-30")
-                      ) {
-                        indicators.forEach((ind) => {
-                          ind.classList.remove(...activeClasses);
-                          ind.classList.add(...inactiveClasses);
-                        });
-                        if (indicators[index]) {
-                          indicators[index].classList.remove(
-                            ...inactiveClasses
-                          );
-                          indicators[index].classList.add(...activeClasses);
-                        }
-                      }
-                    });
-                  });
-                  items.forEach((item) => {
-                    observer.observe(item, {
-                      attributes: true,
-                      attributeFilter: ["class"],
-                    });
-                  });
-                });
-              </script>
+                <li class="splide__slide">
+                  <div
+                    class="relative h-[400px] md:h-[500px] lg:h-[600px] w-full bg-white rounded-xl overflow-hidden shadow-lg p-2"
+                  >
+                    <div
+                      class="grid grid-cols-3 grid-rows-3 gap-2 w-full h-full"
+                    >
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png_2.1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/png5.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon1.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon2.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon3.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                      <div class="relative overflow-hidden rounded-lg group">
+                        <img
+                          src="Images/icon4.png"
+                          class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          alt="Img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide("#gallery-splide", {
+          type: "loop",
+          perPage: 1,
+          autoplay: true,
+          interval: 5000,
+          arrows: false,
+          pagination: true, // Đảm bảo pagination được bật
+        });
+
+        splide.mount();
+
+        var prevBtn = document.getElementById("custom-prev");
+        var nextBtn = document.getElementById("custom-next");
+
+        prevBtn.addEventListener("click", function () {
+          splide.go("<");
+        });
+
+        nextBtn.addEventListener("click", function () {
+          splide.go(">");
+        });
+      });
+    </script>
+
     <!-- Frame 5 -->
     <div
-      class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
+      class="2xl:container mx-auto relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
       style="clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 80%)"
     >
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style="background-image: url('Images/Group 10019.png')"
-      ></div>
+      <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat">
+        <img src="Images/Group 10019.png" alt="" class="size-full" />
+      </div>
 
-      <div class="container mx-auto mt-auto px-6 relative z-10 py-12">
+      <div class="mt-auto relative z-10 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
           <div
             class="lg:col-span-2 flex justify-center order-2 lg:order-1 mt-10 lg:mt-32 relative"
@@ -876,7 +877,7 @@
             <img
               src="Images/png5.png"
               alt="Doctor Image"
-              class="max-h-[400px] lg:max-h-[700px] w-auto object-contain drop-shadow-2xl"
+              class="max-h-[400px] lg:max-h-full w-auto object-contain drop"
             />
           </div>
 
@@ -893,15 +894,14 @@
                   >Câu hỏi</span
                 >
               </div>
-              <h2 class="text-2xl lg:text-4xl font-bold text-gray-800">
+              <h2 class="text-2xl lg:text-3xl font-bold text-gray-800">
                 Những câu hỏi thường gặp
               </h2>
             </div>
 
             <div class="w-full space-y-3">
-              <!-- Item 1 -->
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -914,9 +914,9 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 2 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40 dropdown"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -927,12 +927,11 @@
                   class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
                 >
                   <i class="fa-solid fa-plus text-xs"></i>
-                  <div class="dropdown-content">Hello World!</div>
                 </div>
               </div>
-              <!-- Item 3 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -945,9 +944,9 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 4 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -960,9 +959,9 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 5 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -975,9 +974,24 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 6 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
+                  nào?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -990,9 +1004,9 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 7 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
@@ -1005,14 +1019,29 @@
                   <i class="fa-solid fa-plus text-xs"></i>
                 </div>
               </div>
-              <!-- Item 8 -->
+
               <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-3 lg:p-4 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
               >
                 <span
                   class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
                   >Bệnh viện Đa khoa Phương Đông đang triển khai các gói khám
                   sức khỏe nào?</span
+                >
+                <div
+                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </div>
+              </div>
+
+              <div
+                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              >
+                <span
+                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
+                  nào?</span
                 >
                 <div
                   class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
@@ -1026,56 +1055,28 @@
       </div>
     </div>
 
-    <!-- Frame 6 -->
+    <!-- Frame 6 - Process Flow -->
     <div
-      class="relative w-full min-h-[600px] lg:min-h-[900px] flex flex-col items-center mt-10"
-    >
-      <div class="relative z-10 container mx-auto px-6 py-12">
-        <div
-          class="flex flex-col gap-2 mb-6 w-full justify-center text-center items-center"
-        >
-          <div class="flex flex-row items-center gap-2 justify-center">
-            <div class="w-8 h-[1px] bg-[#0a9949]"></div>
-            <span
-              class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
-            >
-              Quy trình
-            </span>
-            <div class="w-8 h-[1px] bg-[#0a9949]"></div>
-          </div>
-          <h2 class="text-2xl lg:text-4xl font-bold text-gray-800">
-            Quy trình sử dụng dịch vụ Khám bệnh tại nhà
-          </h2>
-        </div>
-      </div>
-      <div
-        class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
-      >
-        <div class="min-h-screen w-full overflow-x-hidden">
-          <div
-            class="relative w-full h-[600px] lg:h-[900px] bg-cover bg-center bg-no-repeat"
-            style="background-image: url('Images/Frame6.png')"
-          ></div>
-        </div>
-      </div>
-    </div>
+      class="relative w-full min-h-[800px] lg:min-h-[1000px] flex flex-col items-center mt-10 py-12 overflow-hidden"
+    ></div>
 
     <!-- Frame 7 -->
-    <div
-      class="relative w-full min-h-[600px] lg:min-h-[900px] flex items-center"
-    >
+    <div class="2xl:container mx-auto relative w-full overflow-hidden">
       <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style="
-          background-image: url('Images/Mask\ group.png');
-          clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%);
-        "
-      ></div>
+        class="absolute inset-0 z-0 w-full h-full pointer-events-none"
+        style="clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%)"
+      >
+        <img
+          src="Images/Mask group.png"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
 
       <div
-        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-6"
+        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-4 lg:px-6 py-10"
       >
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center order-2 lg:order-1">
           <div
             class="flex flex-col gap-2 mb-6 w-full justify-center items-start"
           >
@@ -1093,24 +1094,14 @@
             </h2>
 
             <p class="text-gray-600 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
-              nec morbi mauris, turpis fringilla condimentum urna sagittis est.
-              Id tortor odio posuere a cursus netus massa. Tellus etiam nisl
-              pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare
-              sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id
-              nulla mauris. Sagittis turpis eget mauris massa congue in rutrum
-              vel. Augue est nunc a id quis mattis. Lorem ipsum dolor sit amet,
-              consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
-
-            <p class="text-gray-600 text-sm">
-              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi. Để được
-              báo giá chính xác nhất, quý khách liên hệ tổng đài 19001806.
+            <p class="text-gray-600 text-sm my-2">
+              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi...
             </p>
 
             <h3 class="font-semibold text-gray-800 mb-4">
-              Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
-              ngay!
+              Quý khách vui lòng để lại số điện thoại...
             </h3>
 
             <div class="w-full">
@@ -1124,7 +1115,7 @@
                 />
 
                 <button
-                  class="btn_orange text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap"
+                  class="bg-gradient-to-r from-[#3eed8b] to-[#0a9949] text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap hover:opacity-90 transition"
                 >
                   <i class="fa-solid fa-paper-plane text-sm"></i>
                   <span class="text-sm md:text-base">GỬI THÔNG TIN</span>
@@ -1132,154 +1123,548 @@
               </div>
             </div>
 
-            <div class="mt-6 flex gap-2">
+            <div class="mt-8 flex gap-3">
               <button
-                class="w-8 h-8 rounded-full bg-white border border-green-500 flex items-center justify-center hover:bg-green-500 group transition-colors"
+                id="btn-prev"
+                class="w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center text-[#0a9949] hover:bg-[#0a9949] hover:text-white transition-all duration-300 shadow-sm"
               >
-                <i
-                  class="fa-solid fa-arrow-left text-green-500 group-hover:text-white text-xs"
-                ></i>
+                <i class="fa-solid fa-arrow-left"></i>
               </button>
+
               <button
-                class="w-8 h-8 rounded-full bg-white border border-green-500 flex items-center justify-center hover:bg-green-500 group transition-colors"
+                id="btn-next"
+                class="w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center text-[#0a9949] hover:bg-[#0a9949] hover:text-white transition-all duration-300 shadow-sm"
               >
-                <i
-                  class="fa-solid fa-arrow-right text-green-500 group-hover:text-white text-xs"
-                ></i>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
         </div>
 
         <div
-          class="w-full h-full relative flex justify-center items-center py-8 lg:py-12"
+          class="w-full h-full relative flex justify-center items-center py-4 lg:py-0 order-1 lg:order-2"
         >
           <div
-            id="default-carousel"
-            class="w-full relative"
-            data-carousel="slide"
-            data-carousel-interval="5000"
+            id="price-splide"
+            class="splide w-full rounded-2xl overflow-hidden"
           >
-            <div
-              class="relative h-[300px] md:h-[800px] overflow-hidden rounded-2xl shadow-2xl"
-            >
-              <div
-                class="hidden duration-700 ease-in-out"
-                data-carousel-item="active"
-              >
-                <img
-                  src="Images/Banggia.jpg"
-                  class="absolute block w-full h-full object-cover"
-                  alt="Slide 1"
-                />
-              </div>
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 1"
+                    />
+                  </div>
+                </li>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="Images/Banggia.jpg"
-                  class="absolute block w-full h-full object-cover"
-                  alt="Slide 2"
-                />
-              </div>
+                <li class="splide__slide">
+                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 2"
+                    />
+                  </div>
+                </li>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="Images/Banggia.jpg"
-                  class="absolute block w-full h-full object-cover"
-                  alt="Slide 3"
-                />
-              </div>
-
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="Images/Banggia.jpg"
-                  class="absolute block w-full h-full object-cover"
-                  alt="Slide 4"
-                />
-              </div>
-            </div>
-
-            <div
-              class="flex justify-center mt-6 space-x-2"
-              data-carousel-indicators
-            >
-              <button
-                type="button"
-                class="w-8 h-1.5 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] transition-all duration-500"
-                aria-current="true"
-                aria-label="Slide 1"
-                data-carousel-slide-to="0"
-              ></button>
-              <button
-                type="button"
-                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
-                aria-current="false"
-                aria-label="Slide 2"
-                data-carousel-slide-to="1"
-              ></button>
-              <button
-                type="button"
-                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
-                aria-current="false"
-                aria-label="Slide 3"
-                data-carousel-slide-to="2"
-              ></button>
-              <button
-                type="button"
-                class="w-3 h-1.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-500"
-                aria-current="false"
-                aria-label="Slide 4"
-                data-carousel-slide-to="3"
-              ></button>
+                <li class="splide__slide">
+                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 3"
+                    />
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const carouselElement = document.getElementById("default-carousel");
-          const items = carouselElement.querySelectorAll(
-            "[data-carousel-item]"
-          );
-          const indicators = carouselElement.querySelectorAll(
-            "[data-carousel-indicators] button"
-          );
-
-          const activeClasses = [
-            "bg-gradient-to-r",
-            "from-[#3eed8b]",
-            "to-[#0a9949]",
-            "w-8",
-          ];
-          const inactiveClasses = ["bg-gray-300", "w-3"];
-
-          const observer = new MutationObserver((mutations) => {
-            items.forEach((item, index) => {
-              if (
-                !item.classList.contains() &&
-                item.classList.contains("z-30")
-              ) {
-                indicators.forEach((ind) => {
-                  ind.classList.remove(...activeClasses);
-                  ind.classList.add(...inactiveClasses);
-                });
-                if (indicators[index]) {
-                  indicators[index].classList.remove(...inactiveClasses);
-                  indicators[index].classList.add(...activeClasses);
-                }
-              }
-            });
-          });
-
-          items.forEach((item) => {
-            observer.observe(item, {
-              attributes: true,
-              attributeFilter: ["class"],
-            });
-          });
-        });
-      </script>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Khởi tạo Splide
+        var splide = new Splide("#price-splide", {
+          type: "loop", // Lặp lại vô tận
+          perPage: 1, // Hiện 1 slide
+          autoplay: true, // Tự động chạy
+          interval: 5000, // 5 giây đổi ảnh
+          arrows: false, // Tắt mũi tên mặc định (để dùng nút custom bên ngoài)
+          pagination: true, // Giữ lại chấm tròn bên dưới ảnh (nếu muốn tắt thì để false)
+        });
+
+        splide.mount();
+
+        // Xử lý sự kiện cho 2 nút Custom bên trái
+        var btnPrev = document.getElementById("btn-prev");
+        var btnNext = document.getElementById("btn-next");
+
+        btnPrev.addEventListener("click", function () {
+          splide.go("<"); // Chuyển về trước
+        });
+
+        btnNext.addEventListener("click", function () {
+          splide.go(">"); // Chuyển về sau
+        });
+      });
+    </script>
+
+    <!-- Frame 8 -->
+    <div class="container mx-auto px-4 my-10">
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4"
+      >
+        <div class="max-w-2xl">
+          <div class="flex flex-row items-center gap-2 mb-2">
+            <div
+              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"
+            ></div>
+            <h1
+              class="bg-clip-text bg-gradient-to-r from-[#3EED8B] to-[#0A9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+            >
+              Ưu đãi
+            </h1>
+          </div>
+          <h2 class="text-lg lg:text-3xl font-bold text-gray-800 leading-tight">
+            Chương trình ưu đãi đặc biệt dành cho gói Khám bệnh tại nhà
+          </h2>
+        </div>
+
+        <div class="flex gap-3">
+          <button
+            id="custom-prev"
+            class="w-10 h-10 rounded-full border border-gray-300 text-gray-500 hover:bg-[#16A085] hover:text-white hover:border-[#16A085] transition flex items-center justify-center"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button
+            id="custom-next"
+            class="w-10 h-10 rounded-full border border-gray-300 text-gray-500 hover:bg-[#16A085] hover:text-white hover:border-[#16A085] transition flex items-center justify-center"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="splide" id="image-carousel">
+        <div class="splide__track py-5">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-56 overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                    >
+                      40%
+                    </p>
+                  </div>
+
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
+                    >
+                      ĐĂNG KÝ NGAY
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-56 overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                    >
+                      40%
+                    </p>
+                  </div>
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
+                      >ĐĂNG KÝ NGAY</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-56 overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                    >
+                      40%
+                    </p>
+                  </div>
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
+                      >ĐĂNG KÝ NGAY</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide("#image-carousel", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          gap: "1rem",
+          pagination: false,
+          arrows: false,
+          breakpoints: {
+            1024: {
+              perPage: 3,
+            },
+            768: {
+              perPage: 2,
+              gap: "0.5rem",
+            },
+            640: {
+              perPage: 2,
+              gap: "0.5rem",
+              padding: { left: 0, right: 20 },
+            },
+          },
+        });
+
+        splide.mount();
+        document
+          .getElementById("custom-prev")
+          .addEventListener("click", function () {
+            splide.go("<");
+          });
+
+        document
+          .getElementById("custom-next")
+          .addEventListener("click", function () {
+            splide.go(">");
+          });
+      });
+    </script>
   </body>
 </html>
