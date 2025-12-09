@@ -20,153 +20,209 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <style>
     .splide__pagination {
-      bottom: -2rem; /* Đẩy xuống dưới ảnh */
-      gap: 6px; /* Khoảng cách giữa các hình chữ nhật */
+      bottom: -2rem;
+      gap: 6px;
     }
-
-    /* Style chung cho các nút hình chữ nhật */
     .splide__pagination__page {
-      width: 10px; /* Chiều rộng mặc định */
-      height: 3px; /* Chiều cao để tạo hình chữ nhật */
-      border-radius: 4px; /* Bo góc nhẹ */
-      background: #d1d5db; /* Màu xám mặc định (Tailwind gray-300) */
-      opacity: 1; /* Hiển thị rõ ràng */
-      transform: none; /* Reset hiệu ứng scale mặc định */
-      transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+      width: 10px;
+      height: 3px;
+      border-radius: 4px;
+      background: #d1d5db;
+      opacity: 1;
+      transform: none;
+      transition: all 0.3s ease;
     }
 
-    /* Style cho nút Active (Đang được chọn) */
     .splide__pagination__page.is-active {
-      /* Màu gradient theo yêu cầu */
       background: linear-gradient(to right, #3eed8b, #0a9949);
-      width: 20px; /* Làm cho nút active dài hơn một chút */
+      width: 20px;
     }
   </style>
 
   <body class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
     <!-- Frame 1 -->
-    <div class="2xl:container mx-auto relative w-full">
-      <div class="absolute inset-0 z-0 w-full h-full">
+    <div
+      class="2xl:container mx-auto relative w-full bg-gradient-to-br from-[#16A085] to-[#F4D03F] md:bg-none"
+    >
+      <div class="hidden md:block absolute inset-0 z-0 w-full h-full">
         <img src="Images/background.png" class="size-full" />
       </div>
 
       <div class="relative z-10 px-5">
-        <header class="container mx-auto py-4">
+        <header class="container mx-auto py-4 px-4 lg:px-0 relative z-50">
           <div
-            class="flex flex-col lg:flex-row items-center justify-between gap-6"
+            class="group flex lg:flex-row items-center justify-between gap-6 flex-row-reverse"
           >
-            <div class="w-full lg:w-auto">
+            <div class="w-auto z-50">
               <img
                 src="Images/logo.png"
                 alt="Logo"
-                class="h-10 object-contain"
+                class="h-6 lg:h-10 object-contain"
               />
             </div>
+
+            <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+            <label
+              for="menu-toggle"
+              class="lg:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50 transition-all duration-300"
+            >
+              <i
+                class="fa-solid fa-bars text-2xl text-gray-800 peer-checked:hidden block"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-3xl text-gray-800 peer-checked:block hidden"
+              ></i>
+            </label>
+
+            <label
+              for="menu-toggle"
+              class="fixed inset-0 bg-black/50 z-30 hidden peer-checked:block lg:hidden transition-opacity"
+            ></label>
+
             <nav
-              class="flex flex-wrap items-center justify-center gap-2 xl:gap-8"
+              class="fixed lg:relative top-0 left-0 lg:right-0 h-full lg:h-auto w-[70%] max-w-sm lg:w-auto bg-white lg:bg-transparent shadow-2xl lg:shadow-none z-[9999] transform -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center pt-8 lg:pt-0 px-8 lg:px-0 gap-6 lg:gap-2 xl:gap-8"
             >
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Giới thiệu
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Đối tượng khách hàng
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Quy trình
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Bảng giá
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Cảm nhận
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Đội ngũ bác sĩ
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
+
               <div
-                class="flex flex-col items-center justify-center cursor-pointer"
+                class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
               >
                 <h1
-                  class="peer text_header font-semibold transition-all duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="text_header font-semibold transition-all duration-300 group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#3eed8b] group-hover/item:to-[#0a9949]"
                 >
                   Hình ảnh và video
                 </h1>
                 <div
-                  class="opacity-0 peer-hover:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+                  class="hidden lg:block opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 w-[14px] h-[3px] rounded-t-[1.5px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
                 ></div>
               </div>
-            </nav>
 
-            <button
-              class="btn_orange text-white font-bold py-2 px-4 rounded-full text-xs"
-            >
-              <div class="flex flex-row items-center gap-2">
+              <a
+                href="tel:19001806"
+                class="lg:hidden btn_orange text-white font-bold py-3 px-6 rounded-full text-sm mt-4 w-full flex justify-center items-center gap-2 shadow-lg"
+              >
                 <span
-                  class="bg-white text-orange-500 w-6 h-6 rounded-full flex items-center justify-center"
+                  class="bg-white text-orange-500 w-8 h-8 rounded-full flex items-center justify-center"
                 >
                   <i class="fa-solid fa-phone-volume"></i>
                 </span>
                 Gọi 1900 1806
-              </div>
-            </button>
+              </a>
+            </nav>
+
+            <a
+              href="tel:19001806"
+              class="hidden lg:flex btn_orange text-white font-bold py-2 px-4 rounded-full text-xs flex-row items-center gap-2"
+            >
+              <span
+                class="bg-white text-orange-500 w-6 h-6 rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone-volume"></i>
+              </span>
+              Gọi 1900 1806
+            </a>
+
+            <style>
+              #menu-toggle:checked + label .fa-bars {
+                display: none;
+              }
+              #menu-toggle:checked + label .fa-xmark {
+                display: block;
+              }
+              #menu-toggle:not(:checked) + label .fa-bars {
+                display: block;
+              }
+              #menu-toggle:not(:checked) + label .fa-xmark {
+                display: none;
+              }
+            </style>
           </div>
         </header>
 
@@ -174,12 +230,12 @@
           class="container mx-auto grid grid-cols-1 lg:grid-cols-7 gap-8 items-center"
         >
           <div
-            class="ml-0 lg:col-span-4 flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
+            class="ml-0 lg:col-span-4 flex flex-col lg:text-left items-center lg:items-start order-2 lg:order-1"
           >
-            <h1 class="text-xl md:text-4xl font-bold mb-3 text-gray-800">
+            <h1 class="text-lg md:text-4xl font-bold lg:mb-3 text-gray-800">
               Dịch vụ Khám bệnh tại nhà
             </h1>
-            <p class="text-xl md:text-4xl font-bold mb-6 text-gray-800">
+            <p class="text-lg md:text-4xl font-bold mb-3 lg:mb-6 text-gray-800">
               An tâm chẳng ngại đường xa
             </p>
 
@@ -242,7 +298,7 @@
       </div>
 
       <div class="mx-auto px-5">
-        <div class="grid lg:grid-cols-2 items-center py-8 lg:py-12">
+        <div class="grid lg:grid-cols-2 items-center py-8 lg:py-12 container">
           <div class="lg:col-span-1 h-full hidden lg:block"></div>
 
           <div
@@ -290,22 +346,22 @@
               </p>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 mt-6">
+            <div class="flex flex-row gap-1 lg:gap-3 mt-6">
               <button
-                class="btn_orange text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+                class="btn_orange text-white font-bold rounded-full py-1 lg:py-3 px-1 lg:px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
               >
                 <div class="flex flex-row gap-2 items-center justify-center">
                   <img src="Images/note.png" alt="" class="w-5 h-5" />
-                  <span>ĐĂNG KÝ TƯ VẤN</span>
+                  <span class="text-xs lg:text-base">ĐĂNG KÝ TƯ VẤN</span>
                 </div>
               </button>
 
               <button
-                class="btn_green text-white font-bold rounded-full py-3 px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+                class="btn_green text-white font-bold rounded-full py-1 lg:py-3 px-1 lg:px-6 shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
               >
                 <div class="flex flex-row gap-2 items-center justify-center">
                   <i class="fa-solid fa-phone-volume"></i>
-                  <span>Gọi cho chúng tôi</span>
+                  <span class="text-xs lg:text-base">Gọi cho chúng tôi</span>
                 </div>
               </button>
             </div>
@@ -332,7 +388,7 @@
         />
       </div>
 
-      <div class="mx-auto px-5">
+      <div class="mx-auto px-5 container">
         <div
           class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center"
         >
@@ -384,7 +440,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+                  class="flex sm:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
                 >
                   <div class="flex justify-center items-center">
                     <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
@@ -410,7 +466,7 @@
                 class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 lg:mt-16 max-h-96"
               >
                 <div
-                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+                  class="flex sm:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
                 >
                   <div class="flex justify-center items-center">
                     <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
@@ -432,7 +488,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex sm:flex-col flex-row items-start gap-4 my-4 lg:col-span-1"
+                  class="flex sm:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
                 >
                   <div class="flex justify-center items-center">
                     <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
@@ -489,40 +545,43 @@
               Hình ảnh khách hàng sử dụng dịch vụ Khám bệnh tại nhà
             </h2>
             <p class="text-sm text-gray-600 mt-2 mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
-              nec morbi mauris, turpis fringilla condimentum urna sagittis est.
-              Id tortor odio posuere a cursus netus massa.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+              quos quisquam debitis est optio repudiandae eum. Maxime doloremque
+              odio nemo suscipit, iusto veniam facilis? Tempora tempore iste
+              ducimus voluptatum magnam.
             </p>
 
-            <button
-              class="bg-gradient-to-r from-[#ff7e00] to-[#ff5d00] text-white font-semibold rounded-full py-3 px-6 shadow-md hover:shadow-lg hover:opacity-90 transition-all w-full sm:w-auto flex flex-row gap-2 items-center justify-center"
+            <div
+              class="flex flex-row justify-between lg:flex-col lg:justify-start"
             >
-              <img
-                src="Images/note.png"
-                alt=""
-                class="w-5 h-5 brightness-0 invert"
-              />
-              <span class="text-sm uppercase">ĐĂNG KÝ TƯ VẤN</span>
-            </button>
-
-            <div class="mt-8 flex gap-4">
               <button
-                id="custom-prev"
-                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300"
+                class="btn_orange text-white font-bold lg:w-[50%] rounded-full py-2 my-3 px-4"
               >
-                <i
-                  class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
-                ></i>
+                <div class="flex flex-row gap-2 items-center justify-center">
+                  <img src="Images/note.png" alt="" />
+                  <span>ĐĂNG KÝ TƯ VẤN</span>
+                </div>
               </button>
 
-              <button
-                id="custom-next"
-                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
-                ></i>
-              </button>
+              <div class="mt-4 flex gap-4">
+                <button
+                  id="custom-prev"
+                  class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
+                  ></i>
+                </button>
+
+                <button
+                  id="custom-next"
+                  class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
+                  ></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -842,7 +901,7 @@
           autoplay: true,
           interval: 5000,
           arrows: false,
-          pagination: true, // Đảm bảo pagination được bật
+          pagination: true,
         });
 
         splide.mount();
@@ -862,208 +921,453 @@
 
     <!-- Frame 5 -->
     <div
-      class="2xl:container mx-auto relative w-full min-h-[600px] lg:min-h-[900px] flex items-center overflow-hidden"
-      style="clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 80%)"
+      class="2xl:container mx-auto relative w-full px-2 lg:px-5 lg:clip-path-frame-5 bg-gradient-to-br from-[#47eac9] to-[#ffe57e] lg:bg-none"
     >
-      <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat">
-        <img src="Images/Group 10019.png" alt="" class="size-full" />
+      <div class="hidden md:block absolute inset-0 z-0 w-full h-full">
+        <img src="Images/anh_nen_frame5.png" class="h-full" />
       </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center container mx-auto"
+      >
+        <img
+          src="Images/bacsi.png"
+          alt="Doctor Image"
+          class="hidden lg:block w-[60%] h-auto absolute lg:-bottom-20 xl:-bottom-30 left-0"
+        />
 
-      <div class="mt-auto relative z-10 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-          <div
-            class="lg:col-span-2 flex justify-center order-2 lg:order-1 mt-10 lg:mt-32 relative"
-          >
-            <img
-              src="Images/png5.png"
-              alt="Doctor Image"
-              class="max-h-[400px] lg:max-h-full w-auto object-contain drop"
-            />
+        <div
+          class="lg:col-span-1 pt-2 !col-start-2 flex flex-col text-center lg:text-left items-center lg:items-start w-full pl-0 lg:pl-10 lg:py-50"
+        >
+          <div class="flex flex-col gap-2 mb-6 w-full">
+            <div
+              class="flex flex-row items-center gap-2 justify-center lg:justify-start"
+            >
+              <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+              <span
+                class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
+                >Câu hỏi</span
+              >
+            </div>
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-800">
+              Những câu hỏi thường gặp
+            </h2>
           </div>
 
-          <div
-            class="lg:col-span-3 flex flex-col text-center lg:text-left items-center lg:items-start order-1 lg:order-2 w-full pl-0 lg:pl-10"
-          >
-            <div class="flex flex-col gap-2 mb-6 w-full">
-              <div
-                class="flex flex-row items-center gap-2 justify-center lg:justify-start"
+          <div class="w-full space-y-3">
+            <div class="flex flex-col gap-3 py-2">
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <div class="w-8 h-[1px] bg-[#0a9949]"></div>
-                <span
-                  class="text-[#0a9949] uppercase text-sm font-medium tracking-wider"
-                  >Câu hỏi</span
+                <summary
+                  class="bg-slate-100/50 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
-              </div>
-              <h2 class="text-2xl lg:text-3xl font-bold text-gray-800">
-                Những câu hỏi thường gặp
-              </h2>
-            </div>
-
-            <div class="w-full space-y-3">
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
-              >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông có dịch vụ thai sản trọn gói
-                  không?</span
-                >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông có dịch vụ thai sản trọn gói
+                    không?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem aspernatur ea accusamus libero a tempore atque.
+                  Nisi ab, delectus, labore aperiam placeat ipsam doloribus
+                  voluptatum reprehenderit odit modi cum laboriosam.
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông có phục vụ ăn uống ngay trong
-                  khuôn viên không?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông có phục vụ ăn uống ngay trong
+                    khuôn viên không?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  atque, molestiae sequi aperiam tempora temporibus amet alias
+                  ex natus fugiat, molestias dolores ratione quidem earum eaque
+                  illum. Quasi, vero rem!
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông có áp dụng Bảo hiểm Y tế, Bảo
-                  hiểm Bảo lãnh không?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông có áp dụng Bảo hiểm Y tế, Bảo
+                    hiểm Bảo lãnh không?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem quia eum repellat doloribus. Dolorem veniam neque
+                  et officia? In, dignissimos hic. Omnis sequi, itaque eius amet
+                  excepturi doloremque perferendis neque.
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông có dịch vụ tiêm chủng trẻ em
-                  không?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông có dịch vụ tiêm chủng trẻ em
+                    không?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Animi nisi praesentium nam dolor commodi adipisci rerum totam
+                  quibusdam unde. Nostrum, aperiam? Sit ipsa doloribus possimus
+                  enim repellendus et iusto tempora.
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
-                  nào?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như
+                    thế nào?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nihil cumque illo soluta distinctio corporis minima iure
+                  exercitationem similique veniam ipsam quibusdam, facere eos
+                  voluptate itaque. Sint natus repudiandae architecto laborum.
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
-                  nào?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như
+                    thế nào?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+                  reprehenderit quidem, nobis neque quasi aspernatur fugit ipsa
+                  quod quae et possimus corporis praesentium recusandae est,
+                  maxime ullam. Error, ea cupiditate.
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông được đầu tư về cơ sở vật chất
-                  như thế nào?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông được đầu tư về cơ sở vật chất
+                    như thế nào?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  blanditiis fugit alias explicabo magni obcaecati maxime
+                  consequatur, voluptatibus amet minus ducimus repudiandae error
+                  doloribus reprehenderit inventore adipisci pariatur, nemo ad!
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Có thể tham khảo lịch khám chi tiết của Bệnh viện Đa khoa
-                  Phương Đông ở đâu?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Có thể tham khảo lịch khám chi tiết của Bệnh viện Đa khoa
+                    Phương Đông ở đâu?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Suscipit eum dolorem quod voluptate tenetur aliquid
+                  consequuntur, in sunt? Cumque dignissimos amet non nostrum.
+                  Earum assumenda molestiae, nobis nemo ipsum quisquam?
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Bệnh viện Đa khoa Phương Đông đang triển khai các gói khám
-                  sức khỏe nào?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Bệnh viện Đa khoa Phương Đông đang triển khai các gói khám
+                    sức khỏe nào?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded-b bg-slate-100/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Suscipit eum dolorem quod voluptate tenetur aliquid
+                  consequuntur, in sunt? Cumque dignissimos amet non nostrum.
+                  Earum assumenda molestiae, nobis nemo ipsum quisquam?
                 </div>
-              </div>
+              </details>
 
-              <div
-                class="bg-white/60 backdrop-blur-md rounded-lg p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-white/80 transition-all shadow-sm border border-white/40"
+              <details
+                class="group open:[&_summary]:rounded-none open:[&_summary]:rounded-t"
               >
-                <span
-                  class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
-                  >Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như thế
-                  nào?</span
+                <summary
+                  class="bg-slate-100/60 backdrop-blur-md rounded-sm p-1 lg:p-2 flex justify-between items-center cursor-pointer hover:bg-slate-100/80 transition-all shadow-sm border border-slate-100/40 select-none list-none"
                 >
+                  <span
+                    class="text-gray-800 font-medium text-xs lg:text-sm text-left pr-4"
+                  >
+                    Thời gian hoạt động của Bệnh viện Đa khoa Phương Đông như
+                    thế nào?
+                  </span>
+                  <div
+                    class="w-6 h-6 rounded-full bg-gradient-to-r from-[#3eed8b] to-[#0a9949] flex items-center justify-center text-slate-100 flex-shrink-0 shadow-md transition-colors"
+                  >
+                    <span
+                      class="flex justify-center items-center group-open:hidden"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </span>
+                    <span
+                      class="hidden justify-center items-center group-open:flex"
+                    >
+                      <i class="fa-solid fa-minus text-xs"></i>
+                    </span>
+                  </div>
+                </summary>
                 <div
-                  class="w-6 h-6 rounded-full background_green flex items-center justify-center text-white flex-shrink-0 shadow-md transition-colors"
+                  class="w-full text-left pt-2 text-gray-600 text-xs lg:text-sm leading-relaxed p-2 rounded bg-white/70 backdrop-blur-md shadow-md"
                 >
-                  <i class="fa-solid fa-plus text-xs"></i>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Suscipit eum dolorem quod voluptate tenetur aliquid
+                  consequuntur, in sunt? Cumque dignissimos amet non nostrum.
+                  Earum assumenda molestiae, nobis nemo ipsum quisquam?
                 </div>
-              </div>
+              </details>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Frame 6 - Process Flow -->
-    <div
-      class="relative w-full min-h-[800px] lg:min-h-[1000px] flex flex-col items-center mt-10 py-12 overflow-hidden"
-    ></div>
+    <!-- Frame 6 -->
+    <div>
+      <div class="flex flex-row items-center gap-2">
+        <div></div>
+        <div
+          class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3eed8b] to-[#0a9949]"
+        ></div>
+        <h1
+          class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+        >
+          Giới thiệu
+        </h1>
+        <h2
+          class="text-xl lg:text-2xl font-semibold text-gray-800 leading-tight mt-2"
+        >
+          Tạo ra tâm lý thoải mái, hỗ trợ điều trị tích cực cho người bệnh
+        </h2>
+      </div>
+
+      <div
+        class="2xl:container mx-auto relative w-full bg-gradient-to-br from-[#51e4c7] to-[#fee687] md:bg-none"
+      >
+        <div class="hidden md:block absolute inset-0 z-0 w-full h-full">
+          <img src="Images/Frame6.png" class="size-full" />
+        </div>
+
+        <div class="relative z-10 px-5">
+          <div class="mx-auto px-5"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Frame 7 -->
-    <div class="2xl:container mx-auto relative w-full overflow-hidden">
+    <div
+      class="2xl:container mx-auto relative w-full overflow-hidden bg-gradient-to-r from-[#8bf9ba] to-[#c7ff57] lg:bg-none"
+    >
       <div
-        class="absolute inset-0 z-0 w-full h-full pointer-events-none"
+        class="hidden lg:block absolute inset-0 z-0 w-full h-full pointer-events-none"
         style="clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%)"
       >
         <img
@@ -1076,7 +1380,7 @@
       <div
         class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-4 lg:px-6 py-10"
       >
-        <div class="flex flex-col justify-center order-2 lg:order-1">
+        <div class="flex flex-col justify-center">
           <div
             class="flex flex-col gap-2 mb-6 w-full justify-center items-start"
           >
@@ -1094,14 +1398,21 @@
             </h2>
 
             <p class="text-gray-600 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reiciendis, iste quisquam porro voluptates velit ex eligendi neque
+              aut reprehenderit exercitationem architecto corrupti! Ipsam natus
+              atque, maiores facilis repudiandae eos commodi.
             </p>
             <p class="text-gray-600 text-sm my-2">
-              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi...
+              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi. Để được
+              báo giá chính xác nhất, quý khách liên hệ tổng đài 19001806,
+              chuyên viên sẽ nhanh chóng tư vấn, hỗ trợ quý khách đặt lịch và
+              giải đáp thắc mắc
             </p>
 
             <h3 class="font-semibold text-gray-800 mb-4">
-              Quý khách vui lòng để lại số điện thoại...
+              Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
+              ngay!
             </h3>
 
             <div class="w-full">
@@ -1115,7 +1426,7 @@
                 />
 
                 <button
-                  class="bg-gradient-to-r from-[#3eed8b] to-[#0a9949] text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap hover:opacity-90 transition"
+                  class="btn_orange text-white font-bold py-3 px-3 lg:px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap hover:opacity-90 transition"
                 >
                   <i class="fa-solid fa-paper-plane text-sm"></i>
                   <span class="text-sm md:text-base">GỬI THÔNG TIN</span>
@@ -1126,32 +1437,33 @@
             <div class="mt-8 flex gap-3">
               <button
                 id="btn-prev"
-                class="w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center text-[#0a9949] hover:bg-[#0a9949] hover:text-white transition-all duration-300 shadow-sm"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
               >
-                <i class="fa-solid fa-arrow-left"></i>
+                <i
+                  class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
+                ></i>
               </button>
 
               <button
                 id="btn-next"
-                class="w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center text-[#0a9949] hover:bg-[#0a9949] hover:text-white transition-all duration-300 shadow-sm"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
               >
-                <i class="fa-solid fa-arrow-right"></i>
+                <i
+                  class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
+                ></i>
               </button>
             </div>
           </div>
         </div>
 
         <div
-          class="w-full h-full relative flex justify-center items-center py-4 lg:py-0 order-1 lg:order-2"
+          class="w-full h-full relative flex justify-center items-center py-4 lg:py-0"
         >
-          <div
-            id="price-splide"
-            class="splide w-full rounded-2xl overflow-hidden"
-          >
+          <div id="price-splide" class="splide w-full rounded-2xl">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                  <div class="relative h-full w-full">
                     <img
                       src="Images/Banggia.jpg"
                       class="w-full h-full object-cover"
@@ -1161,7 +1473,7 @@
                 </li>
 
                 <li class="splide__slide">
-                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                  <div class="relative h-full w-full">
                     <img
                       src="Images/Banggia.jpg"
                       class="w-full h-full object-cover"
@@ -1171,7 +1483,7 @@
                 </li>
 
                 <li class="splide__slide">
-                  <div class="relative h-[300px] md:h-[600px] lg:h-full w-full">
+                  <div class="relative h-full w-full">
                     <img
                       src="Images/Banggia.jpg"
                       class="w-full h-full object-cover"
@@ -1189,28 +1501,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Khởi tạo Splide
         var splide = new Splide("#price-splide", {
-          type: "loop", // Lặp lại vô tận
-          perPage: 1, // Hiện 1 slide
-          autoplay: true, // Tự động chạy
-          interval: 5000, // 5 giây đổi ảnh
-          arrows: false, // Tắt mũi tên mặc định (để dùng nút custom bên ngoài)
-          pagination: true, // Giữ lại chấm tròn bên dưới ảnh (nếu muốn tắt thì để false)
+          type: "loop",
+          perPage: 1,
+          autoplay: true,
+          interval: 5000,
+          arrows: false,
+          pagination: true,
         });
 
         splide.mount();
-
-        // Xử lý sự kiện cho 2 nút Custom bên trái
         var btnPrev = document.getElementById("btn-prev");
         var btnNext = document.getElementById("btn-next");
 
         btnPrev.addEventListener("click", function () {
-          splide.go("<"); // Chuyển về trước
+          splide.go("<");
         });
 
         btnNext.addEventListener("click", function () {
-          splide.go(">"); // Chuyển về sau
+          splide.go(">");
         });
       });
     </script>
@@ -1257,9 +1566,9 @@
           <ul class="splide__list">
             <li class="splide__slide">
               <div
-                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
               >
-                <div class="h-56 overflow-hidden p-3">
+                <div class="h-[50%] w-auto overflow-hidden p-3">
                   <img
                     src="Images/Uu_dai.png"
                     alt="Family"
@@ -1271,7 +1580,7 @@
                   class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
                 >
                   <h3
-                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
                   >
                     Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
                   </h3>
@@ -1280,12 +1589,12 @@
                     class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
                   >
                     <p
-                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
                     >
                       Giảm ngay
                     </p>
                     <p
-                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
                     >
                       40%
                     </p>
@@ -1293,7 +1602,7 @@
 
                   <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1306,12 +1615,12 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
                       >
                     </div>
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1324,13 +1633,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho bán kính 10km</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1343,13 +1652,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1362,17 +1671,17 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
                   </div>
 
                   <button
-                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
                   >
                     <span
-                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
                     >
                       ĐĂNG KÝ NGAY
                     </span>
@@ -1382,40 +1691,43 @@
             </li>
             <li class="splide__slide">
               <div
-                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
               >
-                <div class="h-56 overflow-hidden p-3">
+                <div class="h-[50%] w-auto overflow-hidden p-3">
                   <img
                     src="Images/Uu_dai.png"
                     alt="Family"
                     class="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
+
                 <div
                   class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
                 >
                   <h3
-                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
                   >
                     Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
                   </h3>
+
                   <div
                     class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
                   >
                     <p
-                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
                     >
                       Giảm ngay
                     </p>
                     <p
-                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
                     >
                       40%
                     </p>
                   </div>
+
                   <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1428,12 +1740,12 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
                       >
                     </div>
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1446,13 +1758,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho bán kính 10km</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1465,13 +1777,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1484,59 +1796,63 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
                   </div>
+
                   <button
-                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
                   >
                     <span
-                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
-                      >ĐĂNG KÝ NGAY</span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
                     >
+                      ĐĂNG KÝ NGAY
+                    </span>
                   </button>
                 </div>
               </div>
             </li>
-
             <li class="splide__slide">
               <div
-                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.01] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
               >
-                <div class="h-56 overflow-hidden p-3">
+                <div class="h-[50%] w-auto overflow-hidden p-3">
                   <img
                     src="Images/Uu_dai.png"
                     alt="Family"
                     class="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
+
                 <div
                   class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
                 >
                   <h3
-                    class="font-bold text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
                   >
                     Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
                   </h3>
+
                   <div
                     class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
                   >
                     <p
-                      class="text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
                     >
                       Giảm ngay
                     </p>
                     <p
-                      class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all duration-200"
                     >
                       40%
                     </p>
                   </div>
+
                   <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1549,12 +1865,12 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
                       >
                     </div>
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1567,13 +1883,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho bán kính 10km</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1586,13 +1902,13 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
 
                     <div class="flex items-start gap-3">
-                      <div class="flex-shrink-0 mt-0.5">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
                         <img
                           src="Images/check-circle.png"
                           class="w-5 h-5 block group-hover:hidden"
@@ -1605,18 +1921,20 @@
                         />
                       </div>
                       <span
-                        class="text-gray-600 group-hover:text-white transition-colors"
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
                         >Chương trình ưu đãi dành cho Gia đình 4 người</span
                       >
                     </div>
                   </div>
+
                   <button
-                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-3 px-10 shadow-md transition-all duration-300 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
                   >
                     <span
-                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F]"
-                      >ĐĂNG KÝ NGAY</span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs duration-200 lg:text-lg"
                     >
+                      ĐĂNG KÝ NGAY
+                    </span>
                   </button>
                 </div>
               </div>
@@ -1641,11 +1959,11 @@
               perPage: 3,
             },
             768: {
-              perPage: 2,
+              perPage: 1,
               gap: "0.5rem",
             },
             640: {
-              perPage: 2,
+              perPage: 1,
               gap: "0.5rem",
               padding: { left: 0, right: 20 },
             },
@@ -1653,9 +1971,12 @@
         });
 
         splide.mount();
+
         document
           .getElementById("custom-prev")
           .addEventListener("click", function () {
+            console.log("<");
+
             splide.go("<");
           });
 
@@ -1666,5 +1987,185 @@
           });
       });
     </script>
+
+    <!-- Frame 9 -->
+    <div
+      class="2xl:container mx-auto relative w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
+    >
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
+        <img
+          src="Images/frame9.png"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <div
+        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-1 lg:gap-50 px-4 lg:px-6 py-2 lg:py-10"
+      >
+        <div class="flex justify-center items-center">
+          <h1
+            class="text-2xl lg:text-5xl text-white"
+            style="font-family: 'Allura'"
+          >
+            Chúng tôi luôn tin tưởng rằng Dịch vụ của Phương Đông sẽ làm Quý
+            khách hài lòng!
+          </h1>
+        </div>
+        <div class="flex justify-center lg:justify-end items-center">
+          <div
+            class="w-full mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden"
+          >
+            <div
+              class="sm:text-xl lg:text-2xl py-4 px-6 bg-gradient-to-br from-[#16A085] to-[#F4D03F] text-white text-center"
+            >
+              <h1>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</h1>
+              <p class="text-xs">
+                Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp
+                thời!
+              </p>
+            </div>
+            <form class="py-4 px-6" action="" method="POST">
+              <div class="mb-4">
+                <input
+                  class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  type="text"
+                  placeholder="Họ và tên (*)"
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="phone"
+                  type="tel"
+                  placeholder="Số điện thoại (*)"
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                  placeholder="E-mail"
+                />
+              </div>
+              <div class="mb-4">
+                <textarea
+                  class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
+                  id="message"
+                  rows="4"
+                  placeholder="Nội dung..."
+                ></textarea>
+              </div>
+              <div class="flex items-center justify-center mb-4">
+                <button
+                  class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
+                >
+                  <div class="flex flex-row gap-2 items-center justify-center">
+                    <img src="Images/note.png" alt="" />
+                    <span>ĐĂNG KÝ TƯ VẤN</span>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="2xl:container mx-auto relative w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
+    >
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
+        <img
+          src="Images/footer.jpg"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <div
+        class="container relative z-10 grid grid-cols-2 lg:grid-cols-8 mx-auto gap-6 px-4 lg:px-6 py-10 text-white"
+      >
+        <div class="flex flex-col justify-center items-start lg:col-span-3">
+          <img src="Images/Logo_footer.png" alt="" class="py-2 w-[50%]" />
+          <p class="font-bold lg:text-base text-xs">
+            BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG
+          </p>
+          <div>
+            <span class="font-semibold lg:text-sm text-xs">Địa chỉ: </span>
+            <span class="lg:text-sm text-xs">
+              Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN
+            </span>
+          </div>
+          <div>
+            <span class="font-semibold lg:text-sm text-xs"> Email: </span>
+            <span class="lg:text-sm text-xs"
+              >bvphuongdong@phuongdonghospital.vn</span
+            >
+          </div>
+          <div>
+            <span class="font-semibold lg:text-sm text-xs"> Hotline: </span>
+            <span class="lg:text-sm text-xs">1900 1806</span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-center items-start lg:col-span-2 space-y-2"
+        >
+          <p class="font-semibold lg:text-sm text-xs mb-1">Thời gian mở cửa</p>
+
+          <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
+            <p class="font-semibold lg:text-sm text-xs">Thứ 2 - Chủ nhật:</p>
+            <p class="lg:text-sm text-xs">07:30 - 19:00</p>
+
+            <p class="font-semibold lg:text-sm text-xs">Cấp cứu 24/7:</p>
+            <p class="lg:text-sm text-xs">0833 015 115</p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-start lg:col-span-2 space-y-2"
+        >
+          <p class="font-semibold lg:text-sm text-xs mb-1">Liên hệ</p>
+
+          <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
+            <p class="font-semibold lg:text-sm text-xs">Hotline Tiêm chủng:</p>
+            <p class="lg:text-sm text-xs">0911 615 115</p>
+
+            <p class="font-semibold lg:text-sm text-xs">Hotline Khoa sản:</p>
+            <p class="lg:text-sm text-xs">0911 615 115</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-start">
+          <p class="font-semibold lg:text-sm text-xs">Mạng xã hội</p>
+          <div class="flex flex-row gap-2 mt-2">
+            <a href="#"
+              ><i class="fa-brands fa-facebook text-white text-2xl"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-twitter text-white text-2xl"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-youtube text-white text-2xl"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-instagram text-white text-2xl"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="lg:px-6 container mx-auto">
+          <div
+            class="border-t-2 border-white mt-4 py-4 text-center text-white text-sm"
+          >
+            © 2024 Bệnh viện Đa khoa Phương Đông. Bản quyền thuộc về Bệnh viện
+            Đa khoa Phương Đông.
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
