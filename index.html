@@ -52,14 +52,14 @@
   <body class="flex flex-col min-h-screen w-full overflow-x-hidden bg-white">
     <!-- Frame 1 -->
     <div
-      class="2xl:container mx-auto relative w-full bg-gradient-to-br from-[#c8fdf3] to-[#fff4c8] lg:bg-none"
+      class="2xl:container mx-auto relative w-full bg-gradient-to-br from-[#F4F4DD] to-[#FDFEFE] lg:bg-none"
     >
       <div class="hidden lg:block absolute inset-0 z-0 w-full h-full">
         <img src="Images/background.png" class="size-full" />
       </div>
 
       <div class="relative z-10 px-5">
-        <header class="container mx-auto py-4 px-4 lg:px-0 relative z-50">
+        <header class="container mx-auto py-4 px-4 lg:px-0 relative z-[9999]">
           <div
             class="group flex lg:flex-row items-center justify-between gap-6 flex-row-reverse"
           >
@@ -91,7 +91,7 @@
             ></label>
 
             <nav
-              class="fixed lg:relative top-0 left-0 lg:right-0 h-full lg:h-auto w-[70%] max-w-sm lg:w-auto bg-white lg:bg-transparent shadow-2xl lg:shadow-none z-[9999999999] transform -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center pt-8 lg:pt-0 px-8 lg:px-0 gap-6 lg:gap-2 xl:gap-8"
+              class="fixed lg:relative top-0 left-0 lg:right-0 h-full max-h-screen lg:h-auto w-[70%] max-w-sm lg:w-auto bg-white lg:bg-transparent shadow-2xl lg:shadow-none z-[9999999999] transform -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center pt-8 pb-10 lg:py-0 px-8 lg:px-0 gap-6 lg:gap-2 xl:gap-8 overflow-y-auto lg:overflow-visible"
             >
               <div
                 class="flex flex-col items-start lg:items-center justify-center cursor-pointer w-full lg:w-auto group/item"
@@ -186,7 +186,7 @@
 
               <a
                 href="tel:19001806"
-                class="lg:hidden btn_orange text-white font-bold py-3 px-6 rounded-full text-sm mt-4 w-full flex justify-center items-center gap-2 shadow-lg"
+                class="lg:hidden btn_orange text-white font-bold py-3 px-6 rounded-full text-sm mt-4 w-full flex justify-center items-center gap-2 shadow-lg flex-shrink-0"
               >
                 <span
                   class="bg-white text-orange-500 w-8 h-8 rounded-full flex items-center justify-center"
@@ -372,7 +372,7 @@
 
     <!-- Frame 3 -->
     <div
-      class="w-full h-full lg:my-8 my-3 mx-auto 2xl:container bg-white relative overflow-hidden flex justify-center items-center"
+      class="w-full h-full lg:my-8 my-3 mx-auto 2xl:container bg-white relative overflow-hidden flex justify-center items-center z-0"
     >
       <div class="absolute top-0 left-0 w-full h-full z-0">
         <img
@@ -418,7 +418,7 @@
                 class="grid grid-cols-1 lg:gap3 gap-2 lg:grid-rows-2 max-h-96"
               >
                 <div
-                  class="flex md:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
+                  class="flex sm:flex-col flex-row lg:items-start gap-4 my-4 lg:col-span-1"
                 >
                   <div class="flex justify-start items-center">
                     <button class="btn btn_green_yellow px-2 py-2 rounded-2xl">
@@ -1367,7 +1367,7 @@
 
     <!-- Frame 7 -->
     <div
-      class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-r from-[#d4ffe75e] to-[#edffc9c6] lg:bg-none"
+      class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-r from-[#E0F2E8] to-[#FFFCF2] lg:bg-none"
     >
       <div
         class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-50 lg:opacity-100"
@@ -1534,12 +1534,8 @@
     <!-- Frame 8 -->
     <div class="container mx-auto px-4 my-10">
       <div class="relative">
-        <div>
-          <img
-            src="Images/Vecto4.png"
-            alt=""
-            class="absolute top-0 right-3/5 lg:block"
-          />
+        <div class="absolute top-0 right-3/5 xl:block hidden">
+          <img src="Images/Vecto4.png" alt="" />
         </div>
       </div>
       <div
@@ -2022,7 +2018,7 @@
       </div>
 
       <div
-        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-1 lg:gap-20 px-4 lg:px-6 py-2 lg:py-10"
+        class="container relative z-10 grid grid-cols-2 mx-auto gap-1 lg:gap-20 px-4 lg:px-6 py-2 lg:py-10"
       >
         <div class="flex justify-center items-center">
           <h1
@@ -2116,7 +2112,7 @@
             <p class="font-bold lg:text-base text-xs">
               BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG
             </p>
-            <div style="line-height: 0">
+            <div>
               <span class="font-semibold xl:text-sm text-[9px]">Địa chỉ: </span>
               <span class="xl:text-sm text-[9px]">
                 Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN
