@@ -74,14 +74,12 @@
   display: block;
 }
 
-/* Mobile: Show description on click */
 @media (max-width: 768px) {
   .process-step {
     cursor: pointer;
   }
 }
 
-/* Responsive adjustments for process flow */
 @media (max-width: 768px) {
   .process-step {
     width: 100px;

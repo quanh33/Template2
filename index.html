@@ -933,7 +933,12 @@
           <img
             src="Images/bacsi.png"
             alt="Doctor Image"
-            class="md:block hidden md:opacity-25 lg:opacity-100 md:w-[70%] md:-left-20 lg:w-[60%] h-auto absolute md:-bottom-20 xl:-bottom-30 lg:left-0"
+            class="lg:block hidden md:opacity-25 lg:opacity-100 md:w-[70%] md:-left-20 lg:w-[60%] h-auto absolute md:-bottom-30 lg:left-0"
+          />
+          <img
+            src="Images/png5.png"
+            alt="Doctor Image"
+            class="block lg:hidden opacity-25 lg:opacity-100 h-full absolute bottom-0"
           />
           <div
             class="lg:col-span-1 !col-start-2 my-2 flex flex-col text-center lg:text-left items-center lg:items-start w-full pl-0 lg:pl-10 lg:py-25"
@@ -1327,7 +1332,7 @@
     </div>
 
     <!-- Frame 6 -->
-    <div>
+    <div class="2xl:container mx-auto w-full">
       <div
         class="flex flex-col items-center gap-2 2xl:container mx-auto my-4 px-4 relative"
       >
@@ -1351,210 +1356,469 @@
             Quy trình sử dụng dịch vụ Khám bệnh tại nhà
           </h2>
         </div>
-
-        <div
-          class="container mx-auto relative z-0 w-full bg-gradient-to-br from-[#16A085] to-[#3eed8b] xl:bg-none rounded-2xl overflow-hidden"
-        >
-          <div class="absolute inset-0 z-10 w-full h-full">
+        <div class="container mx-auto relative z-0">
+          <div class="absolute inset-0 z-10 w-full h-full md:block hidden">
             <img src="Images/Frame6.png" class="w-full h-full" />
           </div>
           <div class="relative z-10 px-6 pb-10">
             <div class="mx-auto">
               <div
-                class="relative w-full min-h-[500px] mx-auto flex items-center justify-center"
+                class="relative w-full mx-auto flex items-center justify-center"
               >
                 <button
-                  class="absolute top-[20px] lg:top-20 z-20 px-5 py-3 btn_orange text-white font-semibold rounded-full shadow-lg hover:scale-110 transition flex items-center gap-2"
+                  class="md:absolute lg:top-20 md:top-[40%] z-20 xl:px-5 md:px-4 md:py-3 px-2 py-1 btn_orange text-white font-semibold rounded-full shadow-lg hover:scale-105 transition items-center gap-1 lg:gap-2 hidden md:flex"
                 >
-                  <img src="Images/note.png" alt="" />
-                  <span>ĐĂNG KÝ TƯ VẤN</span>
+                  <img
+                    class="xl:w-[20px] lg:w-[15px] w-[13px]"
+                    src="Images/note.png"
+                    alt=""
+                  />
+                  <span class="xl:text-base text-xs">ĐĂNG KÝ TƯ VẤN</span>
                 </button>
-
-                <div class="absolute top-0 w-full h-full">
-                  <div class="absolute z-15 w-[52%] left-[24.2%] top-[15%]">
-                    <img src="Images/token1.png" alt="" />
-                  </div>
-                  <div class="absolute z-15 w-[36%] left-[32.3%] top-[53%]">
-                    <img src="Images/vecto6.2.png" alt="" />
-                  </div>
-                  <div class="absolute z-15 w-[10%] left-[50%] top-[67%]">
-                    <img src="Images/vecto6.3.png" alt="" />
-                  </div>
-                  <div class="step-card relative z-20 left-[26%] top-[5%]">
-                    <div class="absolute z-30 h-auto w-auto">
-                      <img src="Images/Frame6.1.png" alt="" />
+                <div class="relative w-full">
+                  <div class="absolute inset-0 pointer-events-none">
+                    <div
+                      class="absolute z-15 w-[52%] left-[24.2%] top-[15%] lg:block hidden"
+                    >
+                      <img src="Images/token1.png" alt="" />
                     </div>
                     <div
-                      class="z-30 relative flex flex-col items-center justify-start py-3 h-full gap-3"
+                      class="absolute z-15 w-[36%] lg:left-[32.3%] lg:top-[45%] xl:left-[32.3%] xl:top-[53%] lg:block hidden"
                     >
-                      <span class="step-title">Bước 01</span>
-                      <div class="step-icon">
-                        <img src="Images/icon6.1.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="relative z-20 top-[-10%] left-[7%] flex flex-col justify-center items-end w-[16%] gap-2"
-                  >
-                    <h1 class="font-semibold lg:text-base text-end text-white">
-                      Liên hệ tổng đài bệnh viện
-                    </h1>
-                    <div class="lg:text-sm text-end text-white">
-                      <p>
-                        Khách hàng đăng ký dịch vụ khám bệnh tại nhà theo các
-                        cách sau:
-                      </p>
-                      <p>- Liên hệ tổng đài tư vấn 19001806</p>
-                      <p>
-                        - Nhắn tin tại fanpage Bệnh Viện Đa Khoa Phương Đông.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="absolute top-0 w-full h-full">
-                  <div class="step-card relative z-20 left-[32%] top-[27%]">
-                    <div class="absolute z-30 h-auto w-auto">
-                      <img src="Images/Frame6.2.png" alt="" />
+                      <img src="Images/vecto6.2.png" alt="" />
                     </div>
                     <div
-                      class="z-30 relative flex flex-col xl:items-center xl:justify-center xl:pb-1 xl:pl-4 h-full gap-3"
+                      class="absolute z-15 lg:left-[50%] xl:top-[67%] lg:top-[57%] lg:block hidden"
                     >
-                      <span class="step-title flex items-center justify-center"
-                        >Bước 02</span
+                      <img
+                        src="Images/vecto6.3.png"
+                        alt=""
+                        class="xl:w-full h-full lg:w-[80%]"
+                      />
+                    </div>
+                  </div>
+                  <div class="relative z-10 md:min-h-[450px] xl:min-h-[500px]">
+                    <!-- Step 1 -->
+                    <div
+                      class="w-full justify-start items-center gap-4 flex flex-row md:flex-none"
+                    >
+                      <details
+                        class="group md:absolute md:top-0 md:w-full md:h-full relative md:flex md:justify-start md:flex-none py-3 md:py-0 w-[20%]"
+                        name="steps"
                       >
-                      <div class="step-icon">
-                        <img src="Images/icon6.2.png" alt="" />
+                        <summary
+                          class="step-card relative z-20 lg:left-[26%] lg:top-[5%] top-[30%] md:left-[21%] md:top-[35%] list-none marker:content-none md:transition-opacity md:duration-300 md:cursor-pointer opacity-90 group-open:opacity-100 lg:pointer-events-none lg:opacity-100 lg:cursor-default pointer-events-none md:pointer-events-auto border-green-200 border md:border-none px-3 py-3 md:px-none md:py-none rounded-sm md:rounded-none"
+                        >
+                          <div
+                            class="absolute z-30 h-auto xl:w-full lg:w-[75%] md:w-[85%] w-[20%] hidden md:block"
+                          >
+                            <img src="Images/Frame6.1.png" alt="" />
+                          </div>
+                          <div
+                            class="z-30 md:relative flex flex-col items-center justify-center md:pb-7 xl:justify-start xl:py-3 h-full gap-1 xl:gap-3"
+                          >
+                            <span class="step-title">Bước 01</span>
+                            <div class="step-icon">
+                              <img src="Images/icon6.1.png" alt="" />
+                            </div>
+                          </div>
+                        </summary>
+                        <div
+                          class="absolute z-20 top-[-15%] left-[17%] gap-2 group-open:block animate-fadeIn h-[70%] rotate-180 md:hidden"
+                        >
+                          <img src="Images/Vector6.1_vuong.png" alt="" />
+                        </div>
+                        <div
+                          class="absolute z-20 top-[5%] left-[10%] flex flex-col justify-start items-start w-[50%] gap-2 group-open:block animate-fadeIn md:hidden"
+                        >
+                          <h1
+                            class="font-semibold text-start text-white text-sm"
+                          >
+                            Liên hệ tổng đài bệnh viện
+                          </h1>
+                          <div class="lg:text-sm text-start text-white text-xs">
+                            <p>
+                              Khách hàng đăng ký dịch vụ khám bệnh tại nhà theo
+                              các cách sau:
+                            </p>
+                            <p>- Liên hệ tổng đài tư vấn 19001806</p>
+                            <p>
+                              - Nhắn tin tại fanpage Bệnh Viện Đa Khoa Phương
+                              Đông.
+                            </p>
+                          </div>
+                        </div>
+                      </details>
+                      <div
+                        class="z-40 flex-col justify-center items-start lg:items-end gap-2 md:hidden lg:flex md:absolute lg:top-[20%] lg:left-[7%] lg:w-[16%] w-full"
+                      >
+                        <h1
+                          class="font-semibold xl:text-base text-[11px] lg:text-sm text-start lg:text-end text-black md:text-white"
+                        >
+                          Liên hệ tổng đài bệnh viện
+                        </h1>
+                        <div
+                          class="xl:text-sm text-[9px] text-start lg:text-end text-black md:text-white"
+                        >
+                          <p>
+                            Khách hàng đăng ký dịch vụ khám bệnh tại nhà theo
+                            các cách sau:
+                          </p>
+                          <p>- Liên hệ tổng đài tư vấn 19001806</p>
+                          <p>
+                            - Nhắn tin tại fanpage Bệnh Viện Đa Khoa Phương
+                            Đông.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="relative z-20 top-[40%] left-[6%] flex flex-col justify-center items-end w-[24%] gap-2"
-                  >
-                    <h1 class="font-semibold lg:text-base text-end text-white">
-                      Đặt lịch khám tại nhà
-                    </h1>
-                    <div class="lg:text-sm text-end text-white">
-                      <p>
-                        Nhân viên tư vấn của bệnh viện sẽ liên hệ để xác nhận
-                        lịch hẹn với khách, khai thác thông tin, giúp khách hàng
-                        lựa chọn khung giờ sử dụng dịch vụ, chuyên khoa cần khám
-                        theo danh mục bác sĩ và dịch vụ chuyên môn.
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="absolute top-0 w-full h-full">
-                  <div class="step-card relative z-20 left-[44.5%] top-[36.5%]">
-                    <div class="absolute z-30 h-auto w-auto">
-                      <img src="Images/Frame6.3.png" alt="" />
-                    </div>
+                    <!-- Step 2 -->
                     <div
-                      class="z-30 relative flex flex-col items-center justify-center py-3 h-full gap-3"
+                      class="w-full justify-start items-center gap-4 flex flex-row md:flex-none"
                     >
-                      <span class="step-title">Bước 03</span>
-                      <div class="step-icon">
-                        <img src="Images/icon6.3.png" alt="" />
+                      <details
+                        class="group md:absolute md:top-0 md:w-full md:h-full relative md:flex md:justify-start md:flex-none py-3 md:py-0 w-[20%]"
+                        name="steps"
+                      >
+                        <summary
+                          class="step-card relative z-20 xl:left-[32%] lg:left-[31.5%] lg:top-[22%] xl:top-[27%] md:top-[52%] md:left-[28%] list-none marker:content-none md:transition-opacity md:duration-300 md:cursor-pointer opacity-90 group-open:opacity-100 lg:pointer-events-none lg:opacity-100 lg:cursor-default pointer-events-none md:pointer-events-auto border-green-200 border md:border-none px-3 py-3 md:px-none md:py-none rounded-sm md:rounded-none"
+                        >
+                          <div
+                            class="absolute z-30 h-auto xl:w-full lg:w-[75%] md:w-[90%] w-[20%] hidden md:block"
+                          >
+                            <img src="Images/Frame6.2.png" alt="" />
+                          </div>
+                          <div
+                            class="z-30 md:relative flex flex-col items-center justify-center md:pb-1 md:pl-4 h-full gap-1 xl:gap-3"
+                          >
+                            <span class="step-title">Bước 02</span>
+                            <div class="step-icon">
+                              <img src="Images/icon6.2.png" alt="" />
+                            </div>
+                          </div>
+                        </summary>
+                        <div
+                          class="absolute z-20 top-[74%] left-[29%] gap-2 group-open:block animate-fadeIn rotate-180 md:hidden"
+                        >
+                          <img
+                            src="Images/Vector6.4.cheo.png"
+                            alt=""
+                            class="size-[60%]"
+                          />
+                        </div>
+                        <div
+                          class="absolute z-20 top-[86%] left-[36%] flex flex-col justify-center items-start w-[50%] gap-2 group-open:block animate-fadeIn md:hidden"
+                        >
+                          <h1
+                            class="font-semibold text-start text-white text-sm"
+                          >
+                            Đặt lịch khám tại nhà
+                          </h1>
+                          <div class="lg:text-sm text-start text-white text-xs">
+                            <p>
+                              Nhân viên tư vấn của bệnh viện sẽ liên hệ để xác
+                              nhận lịch hẹn với khách, khai thác thông tin, giúp
+                              khách hàng lựa chọn khung giờ sử dụng dịch vụ,
+                              chuyên khoa cần khám theo danh mục bác sĩ và dịch
+                              vụ chuyên môn.
+                            </p>
+                          </div>
+                        </div>
+                      </details>
+                      <div
+                        class="z-40 flex-col justify-center items-start lg:items-end gap-2 md:hidden lg:flex md:absolute lg:top-[60%] xl:top-[66%] 2xl:top-[70%] lg:left-[6%] lg:w-[24%] w-full"
+                      >
+                        <h1
+                          class="font-semibold xl:text-base text-[11px] lg:text-sm text-start lg:text-end text-black md:text-white"
+                        >
+                          Đặt lịch khám tại nhà
+                        </h1>
+                        <div
+                          class="xl:text-sm text-[9px] text-start lg:text-end text-black md:text-white"
+                        >
+                          <p>
+                            Nhân viên tư vấn của bệnh viện sẽ liên hệ để xác
+                            nhận lịch hẹn với khách, khai thác thông tin, giúp
+                            khách hàng lựa chọn khung giờ sử dụng dịch vụ,
+                            chuyên khoa cần khám theo danh mục bác sĩ và dịch vụ
+                            chuyên môn.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="relative z-20 top-[50%] left-[33.5%] flex flex-col justify-center items-center w-[33%] gap-2"
-                  >
-                    <h1
-                      class="font-semibold lg:text-base text-center text-white"
-                    >
-                      Thanh toán
-                    </h1>
-                    <div class="lg:text-sm text-center text-white">
-                      <p>
-                        Khách hàng có thể lựa chọn thanh toán qua các hình thức
-                        sau:
-                      </p>
-                      <p>
-                        - Thanh toán chi phí online: chuyển khoản, ví điện tử...
-                      </p>
-                      <p>
-                        - Thanh toán tiền mặt tại nhà khi bác sĩ đến thăm khám
-                      </p>
-                      <p>- Thanh toán bằng thẻ</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="absolute top-0 w-full h-full">
-                  <div class="step-card relative z-20 left-[56.8%] top-[27.5%]">
-                    <div class="absolute z-30 h-auto w-auto">
-                      <img src="Images/Frame6.4.png" alt="" />
-                    </div>
+                    <!-- Step 3 -->
                     <div
-                      class="z-30 relative flex flex-col xl:items-center xl:justify-center xl:pb-1 xl:pr-4 h-full gap-3"
+                      class="w-full justify-start items-center gap-4 flex flex-row md:flex-none"
                     >
-                      <span class="step-title">Bước 04</span>
-                      <div class="step-icon">
-                        <img src="Images/icon6.4.png" alt="" />
+                      <details
+                        class="group md:absolute md:top-0 md:w-full md:h-full relative md:flex md:justify-start md:flex-none py-3 md:py-0 w-[20%]"
+                        name="steps"
+                      >
+                        <summary
+                          class="step-card relative z-20 xl:left-[44.5%] lg:left-[43.5%] lg:top-[28%] xl:top-[36.5%] md:top-[58%] md:left-[42%] list-none marker:content-none md:transition-opacity md:duration-300 md:cursor-pointer opacity-90 group-open:opacity-100 lg:pointer-events-none lg:opacity-100 lg:cursor-default pointer-events-none md:pointer-events-auto border-green-200 border md:border-none px-3 py-3 md:px-none md:py-none rounded-sm md:rounded-none"
+                        >
+                          <div
+                            class="absolute z-30 h-auto xl:w-full lg:w-[75%] w-[90%] hidden md:block"
+                          >
+                            <img src="Images/Frame6.3.png" alt="" />
+                          </div>
+                          <div
+                            class="z-30 md:relative flex flex-col items-center justify-center md:py-3 h-full gap-1 xl:gap-3"
+                          >
+                            <span class="step-title">Bước 03</span>
+                            <div class="step-icon">
+                              <img src="Images/icon6.3.png" alt="" />
+                            </div>
+                          </div>
+                        </summary>
+                        <div
+                          class="absolute z-20 top-[83%] left-[49%] gap-2 group-open:block animate-fadeIn rotate-180 md:hidden"
+                        >
+                          <img
+                            src="Images/vecto6.3.png"
+                            alt=""
+                            class="size-[60%]"
+                          />
+                        </div>
+                        <div
+                          class="absolute z-20 top-[90.5%] left-[25.5%] flex flex-col justify-center items-center w-[50%] gap-2 group-open:block animate-fadeIn md:hidden"
+                        >
+                          <h1
+                            class="font-semibold text-center text-white text-sm"
+                          >
+                            Thanh toán
+                          </h1>
+                          <div
+                            class="lg:text-sm text-center text-white text-xs"
+                          >
+                            <p>
+                              Khách hàng có thể lựa chọn thanh toán qua các hình
+                              thức sau:
+                            </p>
+                            <p>
+                              - Thanh toán chi phí online: chuyển khoản, ví điện
+                              tử...
+                            </p>
+                            <p>
+                              - Thanh toán tiền mặt tại nhà khi bác sĩ đến thăm
+                              khám
+                            </p>
+                            <p>- Thanh toán bằng thẻ</p>
+                          </div>
+                        </div>
+                      </details>
+                      <div
+                        class="z-40 flex-col justify-center items-start lg:items-center gap-2 md:hidden lg:flex md:absolute lg:top-[15%] xl:top-[25%] 2xl:top-[35%] lg:left-[33.5%] lg:w-[33%] w-full"
+                      >
+                        <h1
+                          class="font-semibold xl:text-base text-[11px] lg:text-sm text-start lg:text-center text-black md:text-white"
+                        >
+                          Thanh toán
+                        </h1>
+                        <div
+                          class="xl:text-sm text-[9px] text-start lg:text-center text-black md:text-white"
+                        >
+                          <p>
+                            Khách hàng có thể lựa chọn thanh toán qua các hình
+                            thức sau:
+                          </p>
+                          <p>
+                            - Thanh toán chi phí online: chuyển khoản, ví điện
+                            tử...
+                          </p>
+                          <p>
+                            - Thanh toán tiền mặt tại nhà khi bác sĩ đến thăm
+                            khám
+                          </p>
+                          <p>- Thanh toán bằng thẻ</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="relative z-20 top-[40%] left-[70%] flex flex-col justify-center items-start w-[27%] gap-2"
-                  >
-                    <h1
-                      class="font-semibold lg:text-base text-start text-white"
-                    >
-                      Bác sĩ đến khám tại nhà
-                    </h1>
-                    <div class="lg:text-sm text-start text-white">
-                      <p>
-                        Sau khi khách hàng xác nhận thông tin, theo giờ hẹn bác
-                        sĩ và điều dưỡng sẽ đến thăm khám tại nhà theo dịch vụ
-                        yêu cầu: nội khoa, nhi khoa, chẩn đoán hình ảnh... Kết
-                        thúc buổi khám, khách hàng, người bệnh sẽ được hướng dẫn
-                        cài đặt video để bác sĩ tiếp tục theo dõi, tư vấn, giải
-                        đáp thắc mắc.
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="absolute top-0 w-full h-full">
-                  <div class="step-card relative z-20 left-[63%] top-[5%]">
-                    <div class="absolute z-30 h-auto w-auto">
-                      <img src="Images/Frame6.5.png" alt="" />
-                    </div>
+                    <!-- Step 4 -->
                     <div
-                      class="z-30 relative flex flex-col items-center justify-start py-3 h-full gap-3"
+                      class="w-full justify-start items-center gap-4 flex flex-row md:flex-none"
                     >
-                      <span class="step-title">Bước 05</span>
-                      <div class="step-icon">
-                        <img src="Images/icon6.5.png" alt="" />
+                      <details
+                        class="group md:absolute md:top-0 md:w-full md:h-full relative md:flex md:justify-start md:flex-none py-3 md:py-0 w-[20%]"
+                        name="steps"
+                      >
+                        <summary
+                          class="step-card relative z-20 xl:left-[56.8%] lg:left-[55%] lg:top-[22%] xl:top-[27.5%] md:top-[52%] md:left-[56%] list-none marker:content-none md:transition-opacity md:duration-300 md:cursor-pointer opacity-90 group-open:opacity-100 lg:pointer-events-none lg:opacity-100 lg:cursor-default pointer-events-none md:pointer-events-auto border-green-200 border md:border-none px-3 py-3 md:px-none md:py-none rounded-sm md:rounded-none"
+                        >
+                          <div
+                            class="absolute z-30 h-auto xl:w-full lg:w-[75%] w-[90%] hidden md:block"
+                          >
+                            <img src="Images/Frame6.4.png" alt="" />
+                          </div>
+                          <div
+                            class="z-30 md:relative flex flex-col items-center justify-center md:pb-1 md:pr-4 h-full gap-1 xl:gap-3"
+                          >
+                            <span class="step-title">Bước 04</span>
+                            <div class="step-icon">
+                              <img src="Images/icon6.4.png" alt="" />
+                            </div>
+                          </div>
+                        </summary>
+                        <div
+                          class="absolute z-20 top-[74%] left-[66%] gap-2 group-open:block animate-fadeIn rotate-180 md:hidden"
+                        >
+                          <img
+                            src="Images/Vector6.2.cheo.png"
+                            alt=""
+                            class="size-[60%]"
+                          />
+                        </div>
+                        <div
+                          class="absolute z-20 top-[86%] left-[14%] flex flex-col justify-center items-end w-[50%] gap-2 group-open:block animate-fadeIn md:hidden"
+                        >
+                          <h1 class="font-semibold text-end text-white text-sm">
+                            Bác sĩ đến khám tại nhà
+                          </h1>
+                          <div class="lg:text-sm text-end text-white text-xs">
+                            <p>
+                              Sau khi khách hàng xác nhận thông tin, theo giờ
+                              hẹn bác sĩ và điều dưỡng sẽ đến thăm khám tại nhà
+                              theo dịch vụ yêu cầu: nội khoa, nhi khoa, chẩn
+                              đoán hình ảnh... Kết thúc buổi khám, khách hàng,
+                              người bệnh sẽ được hướng dẫn cài đặt video để bác
+                              sĩ tiếp tục theo dõi, tư vấn, giải đáp thắc mắc.
+                            </p>
+                          </div>
+                        </div>
+                      </details>
+                      <div
+                        class="z-40 flex-col justify-center items-start lg:items-start gap-2 md:hidden lg:flex md:absolute lg:top-[-17%] xl:top-[-10%] 2xl:top-0 lg:left-[70%] lg:w-[27%] w-full"
+                      >
+                        <h1
+                          class="font-semibold xl:text-base text-[11px] lg:text-sm text-start text-black md:text-white"
+                        >
+                          Bác sĩ đến khám tại nhà
+                        </h1>
+                        <div
+                          class="xl:text-sm text-[9px] text-start text-black md:text-white"
+                        >
+                          <p>
+                            Sau khi khách hàng xác nhận thông tin, theo giờ hẹn
+                            bác sĩ và điều dưỡng sẽ đến thăm khám tại nhà theo
+                            dịch vụ yêu cầu: nội khoa, nhi khoa, chẩn đoán hình
+                            ảnh... Kết thúc buổi khám, khách hàng, người bệnh sẽ
+                            được hướng dẫn cài đặt video để bác sĩ tiếp tục theo
+                            dõi, tư vấn, giải đáp thắc mắc.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="relative z-20 top-[-10%] left-[77%] flex flex-col justify-center items-start w-[17%] gap-2"
-                  >
-                    <h1
-                      class="font-semibold lg:text-base text-start text-white"
+
+                    <!-- Step 5 -->
+                    <div
+                      class="w-full justify-start items-center gap-4 flex flex-row md:flex-none"
                     >
-                      Kết thúc dịch vụ
-                    </h1>
-                    <div class="lg:text-sm text-start text-white">
-                      <p>
-                        Sau khi khám bệnh, khách hàng sẽ được nhận kết quả khám
-                        thông qua hình thức online hoặc trả tận nơi, bao gồm:
-                      </p>
-                      <p>- Kết quả chẩn đoán</p>
-                      <p>- Khuyến cáo của bác sĩ</p>
-                      <p>- Đơn thuốc</p>
-                      <p>- Hẹn tái khám (nếu có)</p>
+                      <details
+                        class="group md:absolute md:top-0 md:w-full md:h-full relative md:flex md:justify-start md:flex-none py-3 md:py-0 w-[20%]"
+                        name="steps"
+                      >
+                        <summary
+                          class="step-card relative z-20 xl:left-[63%] lg:left-[60%] lg:top-[5%] md:left-[63%] md:top-[35%] list-none marker:content-none md:transition-opacity md:duration-300 md:cursor-pointer opacity-90 group-open:opacity-100 lg:pointer-events-none lg:opacity-100 lg:cursor-default pointer-events-none md:pointer-events-auto border-green-200 border md:border-none px-3 py-3 md:px-none md:py-none rounded-sm md:rounded-none"
+                        >
+                          <div
+                            class="absolute z-30 h-auto xl:w-full lg:w-[75%] md:w-[85%] w-[20%] hidden md:block"
+                          >
+                            <img src="Images/Frame6.5.png" alt="" />
+                          </div>
+                          <div
+                            class="z-30 md:relative flex flex-col items-center justify-center md:pb-7 xl:justify-start xl:py-3 h-full gap-1 xl:gap-3"
+                          >
+                            <span class="step-title">Bước 05</span>
+                            <div class="step-icon">
+                              <img src="Images/icon6.5.png" alt="" />
+                            </div>
+                          </div>
+                        </summary>
+                        <div
+                          class="absolute z-20 top-[31%] left-[78%] gap-2 group-open:block animate-fadeIn rotate-180 md:hidden"
+                        >
+                          <img
+                            src="Images/Vector6.5_vuong.png"
+                            alt=""
+                            class="size-[90%]"
+                          />
+                        </div>
+                        <div
+                          class="absolute z-20 top-[5%] left-[40%] flex flex-col justify-end items-end w-[50%] gap-2 group-open:block animate-fadeIn md:hidden"
+                        >
+                          <h1 class="font-semibold text-end text-white text-sm">
+                            Kết thúc dịch vụ
+                          </h1>
+                          <div class="lg:text-sm text-end text-white text-xs">
+                            <p>
+                              Sau khi khám bệnh, khách hàng sẽ được nhận kết quả
+                              khám thông qua hình thức online hoặc trả tận nơi,
+                              bao gồm:
+                            </p>
+                            <p>- Kết quả chẩn đoán</p>
+                            <p>- Khuyến cáo của bác sĩ</p>
+                            <p>- Đơn thuốc</p>
+                            <p>- Hẹn tái khám (nếu có)</p>
+                          </div>
+                        </div>
+                      </details>
+                      <div
+                        class="z-40 flex-col justify-center items-start gap-2 md:hidden lg:flex md:absolute lg:top-[-90%] 2xl:top-[-73%] lg:left-[77%] lg:w-[17%] w-full"
+                      >
+                        <h1
+                          class="font-semibold xl:text-base text-[11px] lg:text-sm text-start text-black md:text-white"
+                        >
+                          Kết thúc dịch vụ
+                        </h1>
+                        <div
+                          class="xl:text-sm text-[9px] text-start text-black md:text-white"
+                        >
+                          <p>
+                            Sau khi khám bệnh, khách hàng sẽ được nhận kết quả
+                            khám thông qua hình thức online hoặc trả tận nơi,
+                            bao gồm:
+                          </p>
+                          <p>- Kết quả chẩn đoán</p>
+                          <p>- Khuyến cáo của bác sĩ</p>
+                          <p>- Đơn thuốc</p>
+                          <p>- Hẹn tái khám (nếu có)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Button for mobile -->
+                    <div
+                      class="md:hidden flex justify-center items-center mt-4"
+                    >
+                      <button
+                        class="px-2 py-1 btn_orange text-white font-semibold rounded-full shadow-lg hover:scale-105 transition flex items-center gap-1"
+                      >
+                        <img class="w-[13px]" src="Images/note.png" alt="" />
+                        <span class="xl:text-base text-xs">ĐĂNG KÝ TƯ VẤN</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
 
               <style>
+                @keyframes fadeIn {
+                  from {
+                    opacity: 0;
+                    transform: translateY(-5px);
+                  }
+                  to {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+                .animate-fadeIn {
+                  animation: fadeIn 0.3s ease-out forwards;
+                }
+
                 .step-card {
                   background-position: center;
                   background-repeat: no-repeat;
@@ -1562,25 +1826,20 @@
                   align-items: center;
                   justify-content: center;
                 }
-
                 .step-card:hover {
                   transform: scale(1.05);
                   transition: transform 0.3s ease-in-out;
                 }
-
                 .step-content {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
                 }
-
                 .step-title {
-                  font-size: 14px;
                   font-weight: 600;
                   color: #374151;
                 }
-
                 .step-icon {
                   width: 40px;
                   height: 40px;
@@ -1588,7 +1847,6 @@
                   align-items: center;
                   justify-content: center;
                 }
-
                 @media (min-width: 768px) {
                   .step-card {
                     width: 120px;
@@ -1598,855 +1856,861 @@
                     font-size: 16px;
                   }
                   .step-icon i {
-                    font-size: 28px;
+                    font-size: 20px;
+                  }
+                  @media (max-width: 1200px) {
+                    .step-icon {
+                      width: 25px;
+                      height: 25px;
+                    }
+                    .step-title {
+                      font-size: 12px;
+                    }
                   }
                 }
-
                 @media (min-width: 1024px) {
                   .step-card {
                     width: 140px;
                     height: 150px;
                   }
                 }
+                @media (max-width: 560px) {
+                  .step-title {
+                    font-size: 10px;
+                    text-align: center;
+                  }
+                  .step-icon {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+
+                /* Thêm class cho button orange */
+                .btn_orange {
+                  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+                }
               </style>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Frame 7 -->
+    <!-- Frame 7 -->
+    <div
+      class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-r from-[#E0F2E8] to-[#FFFCF2] lg:bg-none"
+    >
       <div
-        class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-r from-[#E0F2E8] to-[#FFFCF2] lg:bg-none"
+        class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-50 lg:opacity-100"
+        style="clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%)"
       >
-        <div
-          class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-50 lg:opacity-100"
-          style="clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%)"
-        >
-          <img
-            src="Images/Mask group.png"
-            alt=""
-            class="w-full h-full object-cover opacity-50"
-          />
+        <img
+          src="Images/Mask group.png"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <div
+        class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-4 lg:px-6 py-10"
+      >
+        <div class="absolute z-20 top-10 left-1/3 lg:block hidden">
+          <img src="Images/Vector2.png" alt="" class="size-3/4" />
         </div>
+        <div class="flex flex-col justify-center">
+          <div
+            class="flex flex-col gap-2 mb-6 w-full justify-center items-start"
+          >
+            <div class="flex flex-row items-center gap-2 justify-start">
+              <div class="w-8 h-[1px] bg-[#0a9949]"></div>
+              <h1
+                class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+              >
+                BẢNG GIÁ
+              </h1>
+            </div>
 
-        <div
-          class="container relative z-10 grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 lg:gap-12 px-4 lg:px-6 py-10"
-        >
-          <div class="absolute z-20 top-10 left-1/3 lg:block hidden">
-            <img src="Images/Vector2.png" alt="" class="size-3/4" />
-          </div>
-          <div class="flex flex-col justify-center">
-            <div
-              class="flex flex-col gap-2 mb-6 w-full justify-center items-start"
-            >
-              <div class="flex flex-row items-center gap-2 justify-start">
-                <div class="w-8 h-[1px] bg-[#0a9949]"></div>
-                <h1
-                  class="bg-clip-text bg-gradient-to-r from-[#3eed8b] to-[#0a9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
-                >
-                  BẢNG GIÁ
-                </h1>
-              </div>
+            <h2 class="text-2xl lg:text-4xl font-bold text-gray-800 mb-4">
+              Bảng giá dịch vụ tại Phương Đông
+            </h2>
 
-              <h2 class="text-2xl lg:text-4xl font-bold text-gray-800 mb-4">
-                Bảng giá dịch vụ tại Phương Đông
-              </h2>
+            <p class="text-gray-600 text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reiciendis, iste quisquam porro voluptates velit ex eligendi neque
+              aut reprehenderit exercitationem architecto corrupti! Ipsam natus
+              atque, maiores facilis repudiandae eos commodi.
+            </p>
+            <p class="text-gray-600 text-sm my-2">
+              Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi. Để được
+              báo giá chính xác nhất, quý khách liên hệ tổng đài 19001806,
+              chuyên viên sẽ nhanh chóng tư vấn, hỗ trợ quý khách đặt lịch và
+              giải đáp thắc mắc
+            </p>
 
-              <p class="text-gray-600 text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Reiciendis, iste quisquam porro voluptates velit ex eligendi
-                neque aut reprehenderit exercitationem architecto corrupti!
-                Ipsam natus atque, maiores facilis repudiandae eos commodi.
-              </p>
-              <p class="text-gray-600 text-sm my-2">
-                Lưu ý: Tùy từng thời điểm, bảng giá có thể có thay đổi. Để được
-                báo giá chính xác nhất, quý khách liên hệ tổng đài 19001806,
-                chuyên viên sẽ nhanh chóng tư vấn, hỗ trợ quý khách đặt lịch và
-                giải đáp thắc mắc
-              </p>
+            <h3 class="font-semibold text-gray-800 mb-4">
+              Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
+              ngay!
+            </h3>
 
-              <h3 class="font-semibold text-gray-800 mb-4">
-                Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ
-                lại ngay!
-              </h3>
-
-              <div class="w-full">
-                <div
-                  class="w-full max-w-2xl rounded-full p-1.5 pl-6 flex items-center bg-white border border-gray-100 hover:shadow-sm"
-                >
-                  <input
-                    type="text"
-                    placeholder="Nhập số điện thoại..."
-                    class="flex-1 bg-transparent border-none outline-none text-gray-600 placeholder-gray-400 text-sm md:text-base"
-                  />
-
-                  <button
-                    class="btn_orange text-white font-bold py-3 px-3 lg:px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap hover:opacity-90 transition"
-                  >
-                    <i class="fa-solid fa-paper-plane text-sm"></i>
-                    <p class="sm:block lg:hidden text-sm">GỬI</p>
-                    <p class="lg:block hidden text-base">GỬI THÔNG TIN</p>
-                  </button>
-                </div>
-              </div>
-
-              <div class="mt-8 flex gap-3">
-                <button
-                  id="btn-prev"
-                  class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
-                >
-                  <i
-                    class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
-                  ></i>
-                </button>
+            <div class="w-full">
+              <div
+                class="w-full max-w-2xl rounded-full p-1.5 pl-6 flex items-center bg-white border border-gray-100 hover:shadow-sm"
+              >
+                <input
+                  type="text"
+                  placeholder="Nhập số điện thoại..."
+                  class="flex-1 bg-transparent border-none outline-none text-gray-600 placeholder-gray-400 text-sm md:text-base"
+                />
 
                 <button
-                  id="btn-next"
-                  class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+                  class="btn_orange text-white font-bold py-3 px-3 lg:px-6 md:px-8 rounded-full shadow-md flex items-center gap-2 whitespace-nowrap hover:opacity-90 transition"
                 >
-                  <i
-                    class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
-                  ></i>
+                  <i class="fa-solid fa-paper-plane text-sm"></i>
+                  <p class="sm:block lg:hidden text-sm">GỬI</p>
+                  <p class="lg:block hidden text-base">GỬI THÔNG TIN</p>
                 </button>
               </div>
             </div>
+
+            <div class="mt-8 flex gap-3">
+              <button
+                id="btn-prev"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
+                ></i>
+              </button>
+
+              <button
+                id="btn-next"
+                class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
+                ></i>
+              </button>
+            </div>
           </div>
+        </div>
 
-          <div
-            class="w-full h-full relative flex justify-center items-center py-4 lg:py-0"
-          >
-            <div id="price-splide" class="splide w-full rounded-2xl">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="relative h-full w-full">
-                      <img
-                        src="Images/Banggia.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Bảng giá 1"
-                      />
-                    </div>
-                  </li>
+        <div
+          class="w-full h-full relative flex justify-center items-center py-4 lg:py-0"
+        >
+          <div id="price-splide" class="splide w-full rounded-2xl">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="relative h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 1"
+                    />
+                  </div>
+                </li>
 
-                  <li class="splide__slide">
-                    <div class="relative h-full w-full">
-                      <img
-                        src="Images/Banggia.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Bảng giá 2"
-                      />
-                    </div>
-                  </li>
+                <li class="splide__slide">
+                  <div class="relative h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 2"
+                    />
+                  </div>
+                </li>
 
-                  <li class="splide__slide">
-                    <div class="relative h-full w-full">
-                      <img
-                        src="Images/Banggia.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Bảng giá 3"
-                      />
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                <li class="splide__slide">
+                  <div class="relative h-full w-full">
+                    <img
+                      src="Images/Banggia.jpg"
+                      class="w-full h-full object-cover"
+                      alt="Bảng giá 3"
+                    />
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var splide = new Splide("#price-splide", {
-            type: "loop",
-            perPage: 1,
-            autoplay: true,
-            interval: 5000,
-            arrows: false,
-            pagination: true,
-          });
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide("#price-splide", {
+          type: "loop",
+          perPage: 1,
+          autoplay: true,
+          interval: 5000,
+          arrows: false,
+          pagination: true,
+        });
 
-          splide.mount();
-          var btnPrev = document.getElementById("btn-prev");
-          var btnNext = document.getElementById("btn-next");
+        splide.mount();
+        var btnPrev = document.getElementById("btn-prev");
+        var btnNext = document.getElementById("btn-next");
 
-          btnPrev.addEventListener("click", function () {
+        btnPrev.addEventListener("click", function () {
+          splide.go("<");
+        });
+
+        btnNext.addEventListener("click", function () {
+          splide.go(">");
+        });
+      });
+    </script>
+
+    <!-- Frame 8 -->
+    <div class="container mx-auto px-4 my-10">
+      <div class="relative">
+        <div class="absolute top-0 right-3/5 xl:block hidden">
+          <img src="Images/Vecto4.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4"
+      >
+        <div class="max-w-2xl lg:py-7">
+          <div class="flex flex-row items-center gap-2 mb-2">
+            <div
+              class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"
+            ></div>
+            <h1
+              class="bg-clip-text bg-gradient-to-r from-[#3EED8B] to-[#0A9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
+            >
+              Ưu đãi
+            </h1>
+          </div>
+          <h2 class="text-lg lg:text-3xl font-bold text-gray-800 leading-tight">
+            Chương trình ưu đãi đặc biệt dành cho gói Khám bệnh tại nhà
+          </h2>
+        </div>
+
+        <div class="flex gap-3">
+          <button
+            id="frame8-prev"
+            class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+          >
+            <i
+              class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
+            ></i>
+          </button>
+
+          <button
+            id="frame8-next"
+            class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
+          >
+            <i
+              class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="splide" id="image-carousel">
+        <div class="splide__track py-5">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-[50%] w-auto overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                    >
+                      40%
+                    </p>
+                  </div>
+
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
+                    >
+                      ĐĂNG KÝ NGAY
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-[50%] w-auto overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
+                    >
+                      40%
+                    </p>
+                  </div>
+
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
+                    >
+                      ĐĂNG KÝ NGAY
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.01] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
+              >
+                <div class="h-[50%] w-auto overflow-hidden p-3">
+                  <img
+                    src="Images/Uu_dai.png"
+                    alt="Family"
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+
+                <div
+                  class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
+                >
+                  <h3
+                    class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
+                  >
+                    Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
+                  </h3>
+
+                  <div
+                    class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
+                  >
+                    <p
+                      class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
+                    >
+                      Giảm ngay
+                    </p>
+                    <p
+                      class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all duration-200"
+                    >
+                      40%
+                    </p>
+                  </div>
+
+                  <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho bán kính 10km</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 mt-0.5 hidden lg:block">
+                        <img
+                          src="Images/check-circle.png"
+                          class="w-5 h-5 block group-hover:hidden"
+                          alt="check"
+                        />
+                        <img
+                          src="Images/check-circle-change.png"
+                          class="w-5 h-5 hidden group-hover:block"
+                          alt="check-hover"
+                        />
+                      </div>
+                      <span
+                        class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
+                        >Chương trình ưu đãi dành cho Gia đình 4 người</span
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
+                  >
+                    <span
+                      class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs duration-200 lg:text-lg"
+                    >
+                      ĐĂNG KÝ NGAY
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide("#image-carousel", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          gap: "1rem",
+          pagination: false,
+          arrows: false,
+          breakpoints: {
+            1024: {
+              perPage: 3,
+            },
+            768: {
+              perPage: 1,
+              gap: "0.5rem",
+            },
+            640: {
+              perPage: 1,
+              gap: "0.5rem",
+              padding: { left: 0, right: 20 },
+            },
+          },
+        });
+
+        splide.mount();
+
+        document
+          .getElementById("frame8-prev")
+          .addEventListener("click", function () {
+            console.log("<");
+
             splide.go("<");
           });
 
-          btnNext.addEventListener("click", function () {
+        document
+          .getElementById("frame8-next")
+          .addEventListener("click", function () {
             splide.go(">");
           });
-        });
-      </script>
+      });
+    </script>
 
-      <!-- Frame 8 -->
-      <div class="container mx-auto px-4 my-10">
-        <div class="relative">
-          <div class="absolute top-0 right-3/5 xl:block hidden">
-            <img src="Images/Vecto4.png" alt="" />
-          </div>
-        </div>
-        <div
-          class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4"
-        >
-          <div class="max-w-2xl lg:py-7">
-            <div class="flex flex-row items-center gap-2 mb-2">
-              <div
-                class="w-12 lg:w-16 h-[2px] bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"
-              ></div>
-              <h1
-                class="bg-clip-text bg-gradient-to-r from-[#3EED8B] to-[#0A9949] font-semibold text-transparent uppercase tracking-wide text-xs lg:text-sm"
-              >
-                Ưu đãi
-              </h1>
-            </div>
-            <h2
-              class="text-lg lg:text-3xl font-bold text-gray-800 leading-tight"
-            >
-              Chương trình ưu đãi đặc biệt dành cho gói Khám bệnh tại nhà
-            </h2>
-          </div>
-
-          <div class="flex gap-3">
-            <button
-              id="frame8-prev"
-              class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
-            >
-              <i
-                class="fa-solid fa-arrow-left text-[#0a9949] group-hover:text-white"
-              ></i>
-            </button>
-
-            <button
-              id="frame8-next"
-              class="group w-10 h-10 rounded-full bg-white border border-[#0a9949] flex items-center justify-center hover:bg-gradient-to-r hover:from-[#3eed8b] hover:to-[#0a9949] transition-all duration-300 cursor-pointer"
-            >
-              <i
-                class="fa-solid fa-arrow-right text-[#0a9949] group-hover:text-white"
-              ></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="splide" id="image-carousel">
-          <div class="splide__track py-5">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div
-                  class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
-                >
-                  <div class="h-[50%] w-auto overflow-hidden p-3">
-                    <img
-                      src="Images/Uu_dai.png"
-                      alt="Family"
-                      class="w-full h-full object-cover rounded-2xl"
-                    />
-                  </div>
-
-                  <div
-                    class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
-                  >
-                    <h3
-                      class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
-                    >
-                      Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
-                    </h3>
-
-                    <div
-                      class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
-                    >
-                      <p
-                        class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
-                      >
-                        Giảm ngay
-                      </p>
-                      <p
-                        class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
-                      >
-                        40%
-                      </p>
-                    </div>
-
-                    <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
-                        >
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho bán kính 10km</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-                    </div>
-
-                    <button
-                      class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
-                    >
-                      <span
-                        class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
-                      >
-                        ĐĂNG KÝ NGAY
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div
-                  class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
-                >
-                  <div class="h-[50%] w-auto overflow-hidden p-3">
-                    <img
-                      src="Images/Uu_dai.png"
-                      alt="Family"
-                      class="w-full h-full object-cover rounded-2xl"
-                    />
-                  </div>
-
-                  <div
-                    class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
-                  >
-                    <h3
-                      class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
-                    >
-                      Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
-                    </h3>
-
-                    <div
-                      class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
-                    >
-                      <p
-                        class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
-                      >
-                        Giảm ngay
-                      </p>
-                      <p
-                        class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all"
-                      >
-                        40%
-                      </p>
-                    </div>
-
-                    <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
-                        >
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho bán kính 10km</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-                    </div>
-
-                    <button
-                      class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
-                    >
-                      <span
-                        class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs lg:text-lg"
-                      >
-                        ĐĂNG KÝ NGAY
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div
-                  class="group relative flex flex-col rounded-[2rem] overflow-hidden bg-[#EDF7F2] transition-all duration-500 hover:scale-[1.01] hover:bg-gradient-to-br hover:from-[#16A085] hover:to-[#F4D03F] h-full mx-2"
-                >
-                  <div class="h-[50%] w-auto overflow-hidden p-3">
-                    <img
-                      src="Images/Uu_dai.png"
-                      alt="Family"
-                      class="w-full h-full object-cover rounded-2xl"
-                    />
-                  </div>
-
-                  <div
-                    class="pb-6 flex flex-col items-center flex-grow text-center w-full px-4"
-                  >
-                    <h3
-                      class="font-bold text-xs lg:text-lg mb-2 mt-2 px-2 text-gray-800 group-hover:text-white transition-colors"
-                    >
-                      Ưu đãi dịch vụ Khám bệnh tại nhà cho người trên 60 tuổi
-                    </h3>
-
-                    <div
-                      class="my-3 flex flex-row justify-center items-end gap-2 font-semibold"
-                    >
-                      <p
-                        class="text-xs lg:text-sm font-medium text-gray-500 group-hover:text-white/90 transition-colors"
-                      >
-                        Giảm ngay
-                      </p>
-                      <p
-                        class="text-sm lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16A085] to-[#F4D03F] group-hover:text-white group-hover:bg-none transition-all duration-200"
-                      >
-                        40%
-                      </p>
-                    </div>
-
-                    <div class="text-sm text-left w-full px-2 mb-6 space-y-3">
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi từ 01/08 - 31/08/2022</span
-                        >
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho bán kính 10km</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-
-                      <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 mt-0.5 hidden lg:block">
-                          <img
-                            src="Images/check-circle.png"
-                            class="w-5 h-5 block group-hover:hidden"
-                            alt="check"
-                          />
-                          <img
-                            src="Images/check-circle-change.png"
-                            class="w-5 h-5 hidden group-hover:block"
-                            alt="check-hover"
-                          />
-                        </div>
-                        <span
-                          class="text-gray-600 group-hover:text-white transition-colors text-xs lg:text-sm"
-                          >Chương trình ưu đãi dành cho Gia đình 4 người</span
-                        >
-                      </div>
-                    </div>
-
-                    <button
-                      class="mt-auto relative overflow-hidden rounded-xl font-bold py-1 lg:py-3 px-3 lg:px-10 shadow-md transition-all duration-500 bg-gradient-to-r from-[#16A085] to-[#F4D03F] text-white group-hover:bg-none group-hover:bg-white"
-                    >
-                      <span
-                        class="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#16A085] group-hover:to-[#F4D03F] text-xs duration-200 lg:text-lg"
-                      >
-                        ĐĂNG KÝ NGAY
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <!-- Frame 9 -->
+    <div
+      class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
+    >
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
+        <img
+          src="Images/frame9.png"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var splide = new Splide("#image-carousel", {
-            type: "loop",
-            perPage: 3,
-            perMove: 1,
-            gap: "1rem",
-            pagination: false,
-            arrows: false,
-            breakpoints: {
-              1024: {
-                perPage: 3,
-              },
-              768: {
-                perPage: 1,
-                gap: "0.5rem",
-              },
-              640: {
-                perPage: 1,
-                gap: "0.5rem",
-                padding: { left: 0, right: 20 },
-              },
-            },
-          });
-
-          splide.mount();
-
-          document
-            .getElementById("frame8-prev")
-            .addEventListener("click", function () {
-              console.log("<");
-
-              splide.go("<");
-            });
-
-          document
-            .getElementById("frame8-next")
-            .addEventListener("click", function () {
-              splide.go(">");
-            });
-        });
-      </script>
-
-      <!-- Frame 9 -->
       <div
-        class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
+        class="container relative z-10 grid md:grid-cols-2 mx-auto gap-1 lg:gap-20 px-4 lg:px-6 py-2 lg:py-10 justify-center items-center"
       >
-        <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
-          <img
-            src="Images/frame9.png"
-            alt=""
-            class="w-full h-full object-cover opacity-50"
-          />
+        <div class="md:block hidden">
+          <h1
+            class="text-2xl lg:text-5xl text-white"
+            style="font-family: 'Allura'"
+          >
+            Chúng tôi luôn tin tưởng rằng Dịch vụ của Phương Đông sẽ làm Quý
+            khách hài lòng!
+          </h1>
         </div>
 
         <div
-          class="container relative z-10 grid grid-cols-2 mx-auto gap-1 lg:gap-20 px-4 lg:px-6 py-2 lg:py-10"
+          class="w-full mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden"
         >
-          <div class="flex justify-center items-center">
-            <h1
-              class="text-2xl lg:text-5xl text-white"
-              style="font-family: 'Allura'"
-            >
-              Chúng tôi luôn tin tưởng rằng Dịch vụ của Phương Đông sẽ làm Quý
-              khách hài lòng!
-            </h1>
+          <div
+            class="sm:text-xl lg:text-2xl py-4 px-6 bg-gradient-to-br from-[#16A085] to-[#F4D03F] text-white text-center"
+          >
+            <h1>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</h1>
+            <p class="text-xs">
+              Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp
+              thời!
+            </p>
           </div>
-          <div class="flex justify-center items-center">
-            <div
-              class="w-full mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden"
-            >
-              <div
-                class="sm:text-xl lg:text-2xl py-4 px-6 bg-gradient-to-br from-[#16A085] to-[#F4D03F] text-white text-center"
-              >
-                <h1>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</h1>
-                <p class="text-xs">
-                  Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp
-                  thời!
-                </p>
-              </div>
-              <form class="py-4 px-6" action="" method="POST">
-                <div class="mb-4">
-                  <input
-                    class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="name"
-                    type="text"
-                    placeholder="Họ và tên (*)"
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="phone"
-                    type="tel"
-                    placeholder="Số điện thoại (*)"
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="email"
-                    type="email"
-                    placeholder="E-mail"
-                  />
-                </div>
-                <div class="mb-4">
-                  <textarea
-                    class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
-                    id="message"
-                    rows="4"
-                    placeholder="Nội dung..."
-                  ></textarea>
-                </div>
-                <div class="flex items-center justify-center mb-4">
-                  <button
-                    class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
-                  >
-                    <div
-                      class="flex flex-row gap-2 items-center justify-center"
-                    >
-                      <img src="Images/note.png" alt="" />
-                      <span>ĐĂNG KÝ TƯ VẤN</span>
-                    </div>
-                  </button>
-                </div>
-              </form>
+          <form class="py-4 px-6" action="" method="POST">
+            <div class="mb-4">
+              <input
+                class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name"
+                type="text"
+                placeholder="Họ và tên (*)"
+              />
             </div>
-          </div>
+            <div class="mb-4">
+              <input
+                class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="phone"
+                type="tel"
+                placeholder="Số điện thoại (*)"
+              />
+            </div>
+            <div class="mb-4">
+              <input
+                class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="email"
+                type="email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-4">
+              <textarea
+                class="shadow appearance-none border-none bg-slate-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
+                id="message"
+                rows="4"
+                placeholder="Nội dung..."
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-center mb-4">
+              <button
+                class="btn_orange text-white font-bold rounded-full py-2 my-3 px-4"
+              >
+                <div class="flex flex-row gap-2 items-center justify-center">
+                  <img src="Images/note.png" alt="" />
+                  <span>ĐĂNG KÝ TƯ VẤN</span>
+                </div>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
 
-      <!-- Footer -->
-      <div
-        class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
-      >
-        <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
-          <img
-            src="Images/footer.jpg"
-            alt=""
-            class="w-full h-full object-cover opacity-50"
-          />
+    <!-- Footer -->
+    <div
+      class="2xl:container mx-auto relative z-0 w-full overflow-hidden bg-gradient-to-br from-[#16A085] to-[#F4D03F]"
+    >
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg">
+        <img
+          src="Images/footer.jpg"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <div class="container relative z-10 mx-auto px-4 md:px-3 py-10">
+        <div class="py-2 h-[50%]">
+          <img src="Images/Logo_footer.png" alt="" />
         </div>
-
-        <div class="container relative z-10 mx-auto px-4 md:px-3 py-10">
-          <div class="py-2 h-[50%]">
-            <img src="Images/Logo_footer.png" alt="" />
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-3 lg:gap-6 text-white">
+          <div class="flex flex-col justify-center items-start md:col-span-3">
+            <p class="font-bold lg:text-base text-xs">
+              BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG
+            </p>
+            <div style="line-height: 1">
+              <span class="font-semibold xl:text-sm text-[9px]">Địa chỉ: </span>
+              <span class="xl:text-sm text-[9px]">
+                Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN
+              </span>
+            </div>
+            <div style="line-height: 1">
+              <span class="font-semibold xl:text-sm text-[9px]"> Email: </span>
+              <span class="xl:text-sm text-[9px]"
+                >bvphuongdong@phuongdonghospital.vn</span
+              >
+            </div>
+            <div style="line-height: 1">
+              <span class="font-semibold xl:text-sm text-[9px]">
+                Hotline:
+              </span>
+              <span class="xl:text-sm text-[9px]">1900 1806</span>
+            </div>
           </div>
           <div
-            class="grid grid-cols-1 md:grid-cols-8 gap-3 lg:gap-6 text-white"
+            class="flex flex-row md:justify-between justify-start items-start md:col-span-4 gap-3 lg:gap-6"
           >
-            <div class="flex flex-col justify-center items-start md:col-span-3">
-              <p class="font-bold lg:text-base text-xs">
-                BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG
+            <div class="flex flex-col justify-center items-start lg:col-span-2">
+              <p class="font-semibold xl:text-sm text-[9px] mb-1">
+                Thời gian mở cửa
               </p>
-              <div style="line-height: 1">
-                <span class="font-semibold xl:text-sm text-[9px]"
-                  >Địa chỉ:
-                </span>
-                <span class="xl:text-sm text-[9px]">
-                  Số 9, Phố Viên, P. Cổ Nhuế 2, Q. Bắc Từ Liêm, HN
-                </span>
-              </div>
-              <div style="line-height: 1">
-                <span class="font-semibold xl:text-sm text-[9px]">
-                  Email:
-                </span>
-                <span class="xl:text-sm text-[9px]"
-                  >bvphuongdong@phuongdonghospital.vn</span
-                >
-              </div>
-              <div style="line-height: 1">
-                <span class="font-semibold xl:text-sm text-[9px]">
-                  Hotline:
-                </span>
-                <span class="xl:text-sm text-[9px]">1900 1806</span>
+              <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
+                <p class="font-semibold xl:text-sm text-[9px]">
+                  Thứ 2 - Chủ nhật:
+                </p>
+                <p class="xl:text-sm text-[9px]">07:30 - 19:00</p>
+                <p class="font-semibold xl:text-sm text-[9px]">Cấp cứu 24/7:</p>
+                <p class="xl:text-sm text-[9px]">0833 015 115</p>
               </div>
             </div>
             <div
-              class="flex flex-row md:justify-between justify-start items-start md:col-span-4 gap-3 lg:gap-6"
+              class="flex flex-col justify-centers items-start lg:col-span-2"
             >
-              <div
-                class="flex flex-col justify-center items-start lg:col-span-2"
-              >
-                <p class="font-semibold xl:text-sm text-[9px] mb-1">
-                  Thời gian mở cửa
+              <p class="font-semibold xl:text-sm text-[9px] mb-1">Liên hệ</p>
+              <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
+                <p class="font-semibold xl:text-sm text-[9px]">
+                  Hotline Tiêm chủng:
                 </p>
-                <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
-                  <p class="font-semibold xl:text-sm text-[9px]">
-                    Thứ 2 - Chủ nhật:
-                  </p>
-                  <p class="xl:text-sm text-[9px]">07:30 - 19:00</p>
-                  <p class="font-semibold xl:text-sm text-[9px]">
-                    Cấp cứu 24/7:
-                  </p>
-                  <p class="xl:text-sm text-[9px]">0833 015 115</p>
-                </div>
-              </div>
-              <div
-                class="flex flex-col justify-centers items-start lg:col-span-2"
-              >
-                <p class="font-semibold xl:text-sm text-[9px] mb-1">Liên hệ</p>
-                <div class="grid grid-cols-2 lg:gap-x-4 w-full lg:pr-4">
-                  <p class="font-semibold xl:text-sm text-[9px]">
-                    Hotline Tiêm chủng:
-                  </p>
-                  <p class="xl:text-sm text-[9px]">0911 615 115</p>
-                  <p class="font-semibold xl:text-sm text-[9px]">
-                    Hotline Khoa sản:
-                  </p>
-                  <p class="xl:text-sm text-[9px]">0911 615 115</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-start items-start">
-              <p class="font-semibold xl:text-sm text-[9px]">Mạng xã hội</p>
-              <div class="flex flex-row gap-2 mt-2">
-                <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube text-white"></i></a>
-                <a href="#"
-                  ><i class="fa-brands fa-instagram text-white"></i
-                ></a>
+                <p class="xl:text-sm text-[9px]">0911 615 115</p>
+                <p class="font-semibold xl:text-sm text-[9px]">
+                  Hotline Khoa sản:
+                </p>
+                <p class="xl:text-sm text-[9px]">0911 615 115</p>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="lg:px-6 container mx-auto">
-            <div
-              class="border-t-2 border-white mt-4 py-4 text-center text-white text-sm"
-            >
-              © 2024 Bệnh viện Đa khoa Phương Đông. Bản quyền thuộc về Bệnh viện
-              Đa khoa Phương Đông.
+          <div class="flex flex-col justify-start items-start">
+            <p class="font-semibold xl:text-sm text-[9px]">Mạng xã hội</p>
+            <div class="flex flex-row gap-2 mt-2">
+              <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube text-white"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram text-white"></i></a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="lg:px-6 container mx-auto">
+          <div
+            class="border-t-2 border-white mt-4 py-4 text-center text-white text-sm"
+          >
+            © 2024 Bệnh viện Đa khoa Phương Đông. Bản quyền thuộc về Bệnh viện
+            Đa khoa Phương Đông.
           </div>
         </div>
       </div>
